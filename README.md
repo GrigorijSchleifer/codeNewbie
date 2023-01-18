@@ -18,6 +18,8 @@ return True if done == 'done' else False
 ### 18.01.23
 #### Python: Uuuuh ... list comprehension indeed ... we can print everything to the right of ':' with [1] and left with [0]
 
+
+
 ```python
 lst = [
     'X-DSPAM-Confidence:0.8475', 
@@ -32,5 +34,10 @@ print([i.split(':')[1] for i in lst])
 print([i.split(':')[0] for i in lst])
 # ['X-DSPAM-Confidence', 'X-DSPAM-Confidence', 'X-DSPAM-Confidence', 'X-DSPAM-Confidence']
 
+# The reason for that behaviour is that the split method splits the line in two peaces
+# and we access either the first (index 0) or the second (index 1) list item
 
+# here without indexing
+print([i.split(':') for i in lst])
+# [['X-DSPAM-Confidence', '0.8475'], ['X-DSPAM-Confidence', '0.9867'], ['X-DSPAM-Confidence', '0.2872'], ['X-DSPAM-Confidence', '0.0282']]
 ```
