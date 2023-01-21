@@ -41,3 +41,7 @@ print([i.split(':')[0] for i in lst])
 print([i.split(':') for i in lst])
 # [['X-DSPAM-Confidence', '0.8475'], ['X-DSPAM-Confidence', '0.9867'], ['X-DSPAM-Confidence', '0.2872'], ['X-DSPAM-Confidence', '0.0282']]
 ```
+
+### 20.01.23
+#### Github: A cool trick to fire up Vs Code in github, just to press '.' in a repository or to change github.com/ropository name to 'github.dev/repository name
+
