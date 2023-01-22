@@ -43,5 +43,9 @@ print([i.split(':') for i in lst])
 ```
 
 ### 20.01.23
-#### Github: A cool trick to fire up Vs Code in github, just to press '.' in a repository or to change github.com/ropository name to 'github.dev/repository name
+##### Github: A cool trick to fire up Vs Code in github, just to press '.' in a repository or to change github.com/ropository name to 'github.dev/repository name
+
+### 22.01.23
+##### VIM: Display all colorschemes that are used in vim: in vim's normal mode press `:colorscheme [space] [Ctrl+d]`
+
 
