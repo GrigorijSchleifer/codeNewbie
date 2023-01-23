@@ -42,13 +42,25 @@ print([i.split(':') for i in lst])
 # [['X-DSPAM-Confidence', '0.8475'], ['X-DSPAM-Confidence', '0.9867'], ['X-DSPAM-Confidence', '0.2872'], ['X-DSPAM-Confidence', '0.0282']]
 ```
 
-### 20.01.23
-##### Github: A cool trick to fire up Vs Code in github, just to press '.' in a repository or to change github.com/ropository name to 'github.dev/repository name
+## 20.01.23
+### Github: 
 
-### 22.01.23
-##### VIM: Display all colorschemes that are used in vim: in vim's normal mode press `:colorscheme [space] [Ctrl+d]`
+#### A cool trick to fire up Vs Code in github, just to press '.' in a repository or to change github.com/ropository name to 'github.dev/repository name
 
-### 23.01.23
+## 22.01.23
+### VIM: 
+
+Display all colorschemes that are used in vim: in vim's normal mode press `:colorscheme [space] [Ctrl+d]`
+
+## 23.01.23
+
+### Vs Code: 
+
+##### Installing shell command `code` in PATH to be able to open Vs Code from the terminal
+##### Press `Command + Shift + P` inside Vs Code, enter "shell" and than `Enter`
+
+<img width="651" alt="image" src="https://user-images.githubusercontent.com/36699154/214015648-841a842e-c319-44be-86f5-a95080f9eb27.png">
+
 
 ```code
 brew install tmux
