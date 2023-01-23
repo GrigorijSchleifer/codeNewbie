@@ -48,4 +48,9 @@ print([i.split(':') for i in lst])
 ### 22.01.23
 ##### VIM: Display all colorschemes that are used in vim: in vim's normal mode press `:colorscheme [space] [Ctrl+d]`
 
+### 23.01.23
 
+```code
+brew install tmux
+git clone https://github.com/tmux-plugins/tmp ~/.tmux/plugins/tpm
+```
