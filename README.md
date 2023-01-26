@@ -66,3 +66,17 @@ Display all colorschemes that are used in vim: in vim's normal mode press `:colo
 brew install tmux
 git clone https://github.com/tmux-plugins/tmp ~/.tmux/plugins/tpm
 ```
+
+## 26.01.23
+
+### VIM: 
+#### Display of the VIM REFERENCE MANUAL - in VIM's edit mode type:
+
+
+```code
+:h vimrc
+```
+
+<img width="799" alt="image" src="https://user-images.githubusercontent.com/36699154/214760541-6931f696-5dd1-4aee-9178-83af4caab084.png">
+
+
