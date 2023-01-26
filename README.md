@@ -72,6 +72,7 @@ git clone https://github.com/tmux-plugins/tmp ~/.tmux/plugins/tpm
 ### VIM: 
 #### Display of the VIM REFERENCE MANUAL - in VIM's edit mode type:
 
+<a href="https://www.youtube.com/watch?v=JFr28K65-5E">VIM AWESOME TUTORIAL by Leeren</a>
 
 ```code
 :h vimrc
@@ -79,4 +80,17 @@ git clone https://github.com/tmux-plugins/tmp ~/.tmux/plugins/tpm
 
 <img width="799" alt="image" src="https://user-images.githubusercontent.com/36699154/214760541-6931f696-5dd1-4aee-9178-83af4caab084.png">
 
+##### No settings etc should be loaded
+```code
+vim -u NONE
+vim -u NORC
+```
 
+<img width="1385" alt="image" src="https://user-images.githubusercontent.com/36699154/214761405-b09cf04b-d94e-4675-9df2-bf3e21fd2fb6.png">
+
+#### Access to expression register: in NORMAL mode type "= and then &rtp for displaying the content of the runtime path option
+#### And then enter and 'p' for paste
+
+```code
+"=&rtp
+```
