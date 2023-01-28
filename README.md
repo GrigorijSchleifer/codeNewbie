@@ -94,3 +94,12 @@ vim -u NORC
 ```code
 "=&rtp
 ```
+# 27.01.23
+#### readlines() will reall all lines and store them in a list as separate items
+#### readline() will only return the first line
+
+```python
+with open('filename.txt') as f:
+    lines = f.readlines()
+    print(lines)
+```
