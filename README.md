@@ -105,7 +105,7 @@ with open('filename.txt') as f:
 ```
 
 # 29.01.23
-#### read() will read the entire file into a single string
+#### read() will read the entire file into memory as a single string (be carefull with large files)
 #### and if you try to count line numbers it will count all characters
 
 <img width="504" alt="image" src="https://user-images.githubusercontent.com/36699154/215355600-93092a10-c06b-4d05-a0d4-6440a8d6fc6b.png">
