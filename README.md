@@ -110,3 +110,8 @@ with open('filename.txt') as f:
 
 <img width="504" alt="image" src="https://user-images.githubusercontent.com/36699154/215355600-93092a10-c06b-4d05-a0d4-6440a8d6fc6b.png">
 
+# 30.01.23
+#### When pushing changes to remote on a server, github password is your personal access token!
+
+<img width="494" alt="image" src="https://user-images.githubusercontent.com/36699154/215593312-b8142b8d-7063-44d4-b48e-6d50e1d5c71e.png">
+
