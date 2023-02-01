@@ -115,3 +115,15 @@ with open('filename.txt') as f:
 
 <img width="494" alt="image" src="https://user-images.githubusercontent.com/36699154/215593312-b8142b8d-7063-44d4-b48e-6d50e1d5c71e.png">
 
+# 01.02.2023
+# Tired to type "git add ." "git commit -m "bla bla"" and "git push origin master"
+" Just added this code to my .zshrc and triple baaaam
+
+```code
+function lazygit() {
+    git add .
+    git commit -a -m "$1"
+    git push
+}
+```
+
