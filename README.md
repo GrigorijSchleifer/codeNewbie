@@ -134,3 +134,19 @@ function lazygit() {
 ####  Amazing and easy to use ressource to generate README profile for github
 
 https://rahuldkjain.github.io/gh-profile-readme-generator/
+
+#### Holy cow! This code when placed in vscodes settings.json will let you move lines vertically in normal mode
+#### I searched for this for soo long ...
+
+```json
+ "vim.normalModeKeyBindingsNonRecursive": [
+    {
+        "before": ["J"],
+        "commands": ["editor.action.moveLinesDownAction"]
+    }, // moveLineDown
+    {
+        "before": ["K"],
+        "commands": ["editor.action.moveLinesUpAction"]
+    } // moveLineUp
+],
+```
