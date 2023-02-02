@@ -120,7 +120,7 @@ with open('filename.txt') as f:
 #### Just added this code to my .zshrc and triple baaaam
 #### Don't forget to source the .zshrc file
 
-```code
+```bash
 function lazygit() {
     git add .
     git commit -a -m "$1"
