@@ -118,6 +118,7 @@ with open('filename.txt') as f:
 # 01.02.2023
 ####  Tired to type "git add ." "git commit -m "bla bla"" and "git push origin master"
 #### Just added this code to my .zshrc and triple baaaam
+#### Don't forget to source the .zshrc file
 
 ```code
 function lazygit() {
@@ -129,4 +130,7 @@ function lazygit() {
 
 <img width="608" alt="image" src="https://user-images.githubusercontent.com/36699154/216145341-219278e7-b0c1-4c71-9204-d3705a9ed82c.png">
 
+# 02.02.2023
+####  Amazing and easy to use ressource to generate README profile for github
 
+https://rahuldkjain.github.io/gh-profile-readme-generator/
