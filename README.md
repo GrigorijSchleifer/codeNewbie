@@ -150,3 +150,12 @@ https://rahuldkjain.github.io/gh-profile-readme-generator/
     } // moveLineUp
 ],
 ```
+# 03.02.23
+
+```code
+hostnamectl
+```
+
+```
+Show information about the host (server)
+```
