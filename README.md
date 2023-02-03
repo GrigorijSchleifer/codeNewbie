@@ -156,6 +156,16 @@ https://rahuldkjain.github.io/gh-profile-readme-generator/
 hostnamectl
 ```
 
-```
-Show information about the host (server)
+```bash
+# Show information about the host (server)
+  Static hostname: vps40009.alfahosting-vps.de
+         Icon name: computer-container
+           Chassis: container
+        Machine ID: ***
+           Boot ID: ***
+    Virtualization: openvz
+  Operating System: Debian GNU/Linux 10 (buster)
+            Kernel: Linux 4.19.0
+      Architecture: x86-64
+
 ```
