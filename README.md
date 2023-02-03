@@ -169,3 +169,17 @@ hostnamectl
       Architecture: x86-64
 
 ```
+
+
+```code
+SSH configuration on my blink app
+```
+
+```
+Victor Geislinger - Setting up SSH keys for GitHub - Video
+
+ssh-keygen -t ed25519 -C your-git-mail
+eval "$(ssh-agent -s)"
+touch ~/.ssh/config
+...
+```
