@@ -183,3 +183,25 @@ eval "$(ssh-agent -s)"
 touch ~/.ssh/config
 ...
 ```
+
+# 04.02.23
+
+```
+Create a user on my remote server and install brew (not recommendet as root)
+```
+
+```bash
+# following this tutorial
+# https://linuxize.com/post/how-to-add-user-to-sudoers-in-ubuntu/
+
+# create a new user
+createuser name_of_user
+
+# add user to the sudoers group (root)
+usermod -aG sudo name_of_user
+
+# see where linux stores the passwords
+vim ect/passwd
+
+
+```
