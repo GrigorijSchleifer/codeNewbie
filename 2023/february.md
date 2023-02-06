@@ -86,6 +86,16 @@ usermod -aG sudo name_of_user
 
 # see where linux stores the passwords
 vim ect/passwd
-
-
 ```
+
+ # 05.02.23
+
+
+<p>When working with markdown files (.md) on VsCode, one can toggle the preview screen with *shift/alt/v*</p><br>
+
+I love **bold** text and *cool* cats
+
+> cool 
+> 
+> nice
+>> cats
