@@ -90,12 +90,6 @@ vim ect/passwd
 
  # 05.02.23
 
+> When working with markdown files (.md) on VsCode, one can toggle the preview screen with <code>shift/alt/v<code>
 
-<p>When working with markdown files (.md) on VsCode, one can toggle the preview screen with *shift/alt/v*</p><br>
 
-I love **bold** text and *cool* cats
-
-> cool 
-> 
-> nice
->> cats
