@@ -97,7 +97,6 @@ vim ect/passwd
 ```
 Installing pip package manager on remote server whith the goal to install virtualenv
 Virtualenv has to be installed (not like venv that is newer and already preinstalled)
-
 ```
 
 ```
@@ -109,7 +108,21 @@ udo apt-get install python3-pip
 ```
 
 
+```
+Changing the shell from bash to zsh
+```
 
+```
+# this will tell in what shell we are working at the moment
+echo $SHELL
+
+
+# changing shell to zsh
+chsh -s $(which zsh)
+
+# exit and reconnect to remote servert in order to take zsh over permanently
+exit
+```
 
 
 
