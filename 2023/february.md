@@ -105,6 +105,9 @@ python3 --version
 
 # install pip with python3
 udo apt-get install python3-pip
+
+# bacause virtualenv is not added to the PATH you need to know the location of that binary
+pip3 show virtualenv
 ```
 
 
