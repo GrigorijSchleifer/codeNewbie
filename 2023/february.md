@@ -92,4 +92,39 @@ vim ect/passwd
 
 > When working with markdown files (.md) on VsCode, one can toggle the preview screen with <code>shift/alt/v<code>
 
+# 06.02.23
+
+```
+Installing pip package manager on remote server whith the goal to install virtualenv
+Virtualenv has to be installed (not like venv that is newer and already preinstalled)
+
+```
+
+```
+# check python version (in my case python3 was already on my remote machine)
+python3 --version
+
+# install pip with python3
+udo apt-get install python3-pip
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
