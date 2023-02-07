@@ -87,44 +87,15 @@ usermod -aG sudo name_of_user
 # see where linux stores the passwords
 vim ect/passwd
 ```
+# 07.02.23
 
- # 05.02.23
-
-> When working with markdown files (.md) on VsCode, one can toggle the preview screen with <code>shift/alt/v<code>
-
-# 06.02.23
-
-```
-Installing pip package manager on remote server whith the goal to install virtualenv
-Virtualenv has to be installed (not like venv that is newer and already preinstalled)
+```bash
+>> Run shell session as root
 ```
 
-```
-# check python version (in my case python3 was already on my remote machine)
-python3 --version
-
-# install pip with python3
-udo apt-get install python3-pip
-
-# bacause virtualenv is not added to the PATH you need to know the location of that binary
-pip3 show virtualenv
-```
-
-
-```
-Changing the shell from bash to zsh
-```
-
-```
-# this will tell in what shell we are working at the moment
-echo $SHELL
-
-
-# changing shell to zsh
-chsh -s $(which zsh)
-
-# exit and reconnect to remote servert in order to take zsh over permanently
-exit
+```bash
+# -s flag tells sudo to run shell as root
+sudo -s
 ```
 
 
