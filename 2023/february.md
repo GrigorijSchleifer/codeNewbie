@@ -108,12 +108,20 @@ sudo -s
 <br>
 
 ```bash
-Installing virtualenv on remote server
+Installing virtual environments on remote server 
 ```
 
 ```bash
 # command to intall and upgrade the "pip" package manager to the latest version only for the current user
+# -m: This option is used to run a module (pip in this case) as a script
+# !!! Only ever use your system package manager to upgrade the system pip !!!
+python3 -m pip install --user --upgrade pip
+
+# installing virtualenv
 python3 -m pip install --user virtualenv
+
+# creating virtual environment for jekyll static web page development 
+python3 -m virtualenv jekyll_env
 ```
 
 
