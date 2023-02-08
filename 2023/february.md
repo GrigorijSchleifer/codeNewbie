@@ -105,6 +105,18 @@ vim ect/passwd
 # -s flag tells sudo to run shell as root
 sudo -s
 ```
+<br>
+
+```bash
+Installing virtualenv on remote server
+```
+
+```bash
+# command to intall and upgrade the "pip" package manager to the latest version only for the current user
+python3 -m pip install --user virtualenv
+```
+
+
 
 
 
