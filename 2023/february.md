@@ -123,9 +123,15 @@ python3 -m pip install --user virtualenv
 # creating virtual environment for jekyll static web page development 
 python3 -m virtualenv jekyll_env
 ```
+# 10.02.23
 
+```
+Finding manuals to a certain terminal command by keyword lookup 
+```
 
-
+```bash
+$ man -k 'keyword'
+```
 
 
 
