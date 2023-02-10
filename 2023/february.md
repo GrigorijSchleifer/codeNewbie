@@ -131,6 +131,8 @@ Finding manuals to a certain terminal command by keyword lookup
 
 ```bash
 $ man -k 'keyword'
+
+# when command is found and manual is open use /MANUALSECTION to open up this explicit section
 ```
 
 
