@@ -143,6 +143,7 @@ Reverse search for terminal commands you have typed so far
 
 ```bash
 # by pressing this again next command will be displayed
+# by the way the same command in vim is used to redo the last change :)
 Control-r <...>
 ```
 
