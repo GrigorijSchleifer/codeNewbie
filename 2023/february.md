@@ -135,6 +135,18 @@ $ man -k 'keyword'
 # when command is found and manual is open use /MANUALSECTION to open up this explicit section
 ```
 
+# 10.02.23
+
+```
+Reverse search for terminal commands you have typed so far
+```
+
+```bash
+# by pressing this again next command will be displayed
+Control-r <...>
+```
+
+
 
 
 
