@@ -70,9 +70,27 @@ SSH configuration on my blink app
 ```
 Victor Geislinger - Setting up SSH keys for GitHub - Video
 
+# -t ed25519 is the newest type of encryption that will be used to generate the key
+# the key will be stored in ~/.ssh/id_ed25519 (default location)
+# https://www.ssh.com/academy/ssh/keygen (nice tutorial)
 ssh-keygen -t ed25519 -C your-git-mail
+
+# starting the ssh agent
+# Here we let computers ssh agent know about the key (like a wallet thes stores the key)
 eval "$(ssh-agent -s)"
+
+# adding private key to the ssh agent (like putting the id into the wallet)
 touch ~/.ssh/config
+
+# adding that file to ssh
+ssh-add ~/.ssh/id_ed25519
+
+# showing the public key that will be added to githubs 
+cat ~/.ssh/id_ed25519.pub
+
+# check if authentication was successful
+# Hi GrigorijSchleifer! You've successfully authenticated, but GitHub does not provide shell access.
+ssh -T git@github.com
 ...
 ```
 
@@ -148,6 +166,15 @@ Control-r <...>
 ```
 
 
+# 14.02.23
+
+```
+Repeat last command in the terminal
+```
+
+```bash
+!!
+```
 
 
 
