@@ -91,7 +91,10 @@ cat ~/.ssh/id_ed25519.pub
 # check if authentication was successful
 # Hi GrigorijSchleifer! You've successfully authenticated, but GitHub does not provide shell access.
 ssh -T git@github.com
-...
+```
+
+```console
+ssh -T git@github.com
 ```
 
 # 04.02.23
