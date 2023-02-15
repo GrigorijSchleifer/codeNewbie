@@ -128,8 +128,21 @@ sudo -s
 ```
 <br>
 
-```bash
-Installing virtual environments on remote server 
+<details><summary>FEBRUARY</summary>
+<p>
+
+#### We can hide anything, even code!
+
+```ruby
+   puts "Hello World"
+```
+
+</p>
+</details>
+
+```console
+# Installing venv on Debian (like my remote server) or Ubuntu
+sudo apt-get install python3-venv
 ```
 
 ```bash
