@@ -27,8 +27,8 @@ Our project is designed to help participants learn the necessary tools of medica
 
 ```
 Hey, what's up fellas. I'm trying to install Jekyll for running my own technical blog for doctors, but unfortunately 
-I'm not able to update Ruby ... somehow I am stuck on an older version and don't why I get a bunch of errors ... So 
-while I'm trying to stay calm instead of throwing my Mac out of the OR, I found this little snippet that shows my PATH 
+I'm not able to update Ruby ... somehow I am stuck on an older version and don't know why I get a bunch of errors ... 
+So while I'm trying to stay calm instead of throwing my Mac out of the OR, I found this little snippet that shows my PATH 
 in a nice, concise way. Check it out ... and  yes, my PATH <br> is messed up ... the next ToDo is already planned ... 
 see you later
 ```
