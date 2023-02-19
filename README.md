@@ -7,7 +7,6 @@ The focus of this teaching platform will be to introduce digital tools from the 
 Our project is designed to help participants learn the necessary tools of medical data analysis and use them effectively in a healthcare system where medical data is becoming more complex and analytical thinking is becoming more critical.
 
 
-| Year | january | february | march | april |
-| --- | --- | --- | --- | --- |
-| 2022 | [link](https://github.com/GrigorijSchleifer/codeNewbie/blob/main/2023/january.md) | ... | ... | ... |
-| 2023 | [link](https://github.com/GrigorijSchleifer/codeNewbie/blob/main/2023/february.md) |  ... | ... | ... |
+| Year | january | february | march | april | may | june | july | august | september | october | novermber | december
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
+| 2023 | [link](https://github.com/GrigorijSchleifer/codeNewbie/blob/main/2023/january.md) | [link](https://github.com/GrigorijSchleifer/codeNewbie/blob/main/2023/february.md) | ... | ... | ... | ... | ... | ... | ... | ... |
