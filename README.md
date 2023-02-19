@@ -35,6 +35,8 @@ in a nice, concise way. Check it out ... and  yes, my PATH <br> is messed up ...
 see you later ... and as always ... sorry for my gebrochen english
 ```
 
+[Link to a similar but more sophisticated tutorial](https://chriswarrick.com/blog/2018/09/04/python-virtual-environments/)
+
 ```console
 echo $PATH | sed 's/:/\n/g' | uniq -c
 ```
