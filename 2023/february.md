@@ -245,9 +245,11 @@ export WORKON_HOME=~/virtualenvs # this is where you will store all your environ
 # to activate a environment just type
 workon env_name
 ```
-
-
 # 20.02.23
+
+<details>
+  <summary>Display avalable functions in iterm (zsh) </summary>
+<br>
 
 ```
 Hey, what is cookin ... I am adding some more functions to my bash. A neat new way to display all avalable function inside terminal is:
@@ -269,15 +271,19 @@ declare -f | less
 ```
 You can move to the next matched pattern by pressing the n key or move back to the previous match by pressing the N (shift+n) key.
 ```
+</details>
 
+<details>
+  <summary> Get the newest ruby version (Jekyll static webpage installation)</summary>
+<br>
+```
+I want a static webpage where I write about coding and collect my thougts. But, somehow I was not able to get Jekyll installd. And this was because of my ruby environment on Mac. I spent almost a day figuring out why I was not able to install the bundler gem (not sure yet what gem and bundler are) and found this amazing tutorial:
+```
+<br>
+    
+[The fastest and easiest way to install Ruby on a Mac in 2023](https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/#configure-your-shell)
 
-
-
-
-
-
-
-
+</details>
 
 
 
