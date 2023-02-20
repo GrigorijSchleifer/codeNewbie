@@ -247,6 +247,30 @@ workon env_name
 ```
 
 
+# 20.02.23
+
+```
+Hey, what is cookin ... I am adding some more functions to my bash. A neat new way to display all avalable function inside terminal is:
+```
+
+```console
+declare -f
+```
+
+```
+This command will show a huge amount of functions and if you would like to limit the output to only one terminal page than pipe the output 
+of declare into less
+```
+
+```console
+declare -f | less
+```
+
+```
+You can move to the next matched pattern by pressing the n key or move back to the previous match by pressing the N (shift+n) key.
+```
+
+
 
 
 
