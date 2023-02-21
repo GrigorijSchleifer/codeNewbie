@@ -1,8 +1,11 @@
 
-# 01.02.2023
+# 01.02.23
 
+<details>
+  <summary>Commiting like a lazy PRO</summary>
+    
 <br>
-
+    
 ```bash
 Tired of typing "git add ." "git commit -m ..." and "git push origin master"
     >> Add this code to your .zshrc and source the .zshrc file
@@ -16,11 +19,14 @@ function lazygit() {
 }
 ```
 
-```bash
-~ lazygit "commit message"
+```console
+lazygit "commit message"
 ```
+    
+</details>
 
-<br>
+
+
 
 # 02.02.2023
 ####  Amazing and easy to use ressource to generate README profile for github
@@ -128,17 +134,6 @@ sudo -s
 ```
 <br>
 
-<details><summary>FEBRUARY</summary>
-<p>
-
-#### We can hide anything, even code!
-
-```ruby
-   puts "Hello World"
-```
-
-</p>
-</details>
 
 ```console
 # Installing venv on Debian (like my remote server) or Ubuntu
