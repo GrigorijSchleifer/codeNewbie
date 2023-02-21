@@ -285,7 +285,22 @@ I want a static webpage where I write about coding and collect my thougts. But, 
 
 </details>
 
+# 21.02.23
 
+<details>
+  <summary>Stopwords</summary>
+    
+<br>
+    
+```
+This is a link to a page with a collection of stopwords for 40 different languages. 
+```
+    
+<br>
+    
+[Stopwords](https://www.ranks.nl/stopwords/)
+
+</details>
 
 
 
