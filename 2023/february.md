@@ -1,11 +1,8 @@
-
 # 01.02.23
 
 <details>
   <summary>Commiting like a lazy PRO</summary>
-    
 <br>
-    
 ```bash
 Tired of typing "git add ." "git commit -m ..." and "git push origin master"
     >> Add this code to your .zshrc and source the .zshrc file
@@ -22,13 +19,14 @@ function lazygit() {
 ```console
 lazygit "commit message"
 ```
-    
 </details>
 
 
 
 
+
 # 02.02.2023
+
 ####  Amazing and easy to use ressource to generate README profile for github
 
 https://rahuldkjain.github.io/gh-profile-readme-generator/
@@ -105,9 +103,9 @@ ssh -T git@github.com
 
 # 04.02.23
 
-```
-Create a user on my remote server and install brew (not recommendet as root)
-```
+<details>
+  <summary>Create a user on remote server and grand superuser privileges</summary>
+<br>
 
 ```bash
 # following this tutorial
@@ -116,14 +114,22 @@ Create a user on my remote server and install brew (not recommendet as root)
 # create a new user
 createuser name_of_user
 
-# add user to the sudoers group (root)
+# Adding user to the sudoers group (root). This will avoid having to log out of our normal user and log back in as the root account.
+# This will give or user superuser or root privileges allow our normal user to run commands with administrative privileges by putting the word sudo before the command.
+# To add these privileges to our new user, we need to add the user to the sudo group.
 usermod -aG sudo name_of_user
 
 # see where linux stores the passwords
 vim ect/passwd
 ```
-# 07.02.23
+<br>
+</details>
 
+
+
+
+
+# 07.02.23
 ```bash
 >> Run shell session as root
 ```
@@ -152,6 +158,7 @@ python3 -m pip install --user virtualenv
 # creating virtual environment for jekyll static web page development 
 python3 -m virtualenv jekyll_env
 ```
+
 # 10.02.23
 
 ```
@@ -245,7 +252,6 @@ workon env_name
 <details>
   <summary>Display avalable functions in iterm (zsh) </summary>
 <br>
-
 ```
 Hey, what is cookin ... I am adding some more functions to my bash. A neat new way to display all avalable function inside terminal is:
 ```
@@ -267,6 +273,7 @@ declare -f | less
 You can move to the next matched pattern by pressing the n key or move back to the previous match by pressing the N (shift+n) key.
 ```
 </details>
+
 
 <details>
   <summary> Get the newest ruby version (Jekyll static webpage installation)</summary>
