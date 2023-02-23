@@ -304,5 +304,25 @@ This is a link to a page with a collection of stopwords for 40 different languag
 
 </details>
 
+# 24.02.23
+
+
+<details>
+  <summary>Quots do matter in bash</summary>
+    
+<br>
+    
+```
+Hey, this is a cool one. I thougut that double quotes and single quote can be used interchangeably in bash but no! BASH does not expand variables inside single quotes ... what a nice pearl!
+```
+    
+<br>
+    
+<img width="653" alt="image" src="https://user-images.githubusercontent.com/36699154/221005253-1e96958e-1c12-43cc-9908-da73207d321e.png">
+
+</details>
+
+
+
 
 
