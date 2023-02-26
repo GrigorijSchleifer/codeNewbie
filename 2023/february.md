@@ -322,7 +322,26 @@ Hey, this is a cool one. I thougut that double quotes and single quote can be us
 
 </details>
 
+# 2.02.23
 
+
+<details>
+  <summary>Declaring environment variables</summary>
+    
+<br>
+    
+```
+Environment variables are useful, even for me. I check the home directory (HOME) or the <br> shell that is actually running (SHELL) pretty often and to be able to modify this environment variables (those with UPPER CASE letters) is important.
+```
+    
+<br>
+    
+```console
+# this will change the default list of options for the less command
+declare -x LESS="-iqM"
+```
+
+</details>
 
 
 
