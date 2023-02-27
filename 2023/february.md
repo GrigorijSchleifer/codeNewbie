@@ -331,7 +331,7 @@ Hey, this is a cool one. I thougut that double quotes and single quote can be us
 <br>
     
 ```
-Environment variables are useful, even for me. I check the home directory (HOME) or the <br> shell that is actually running (SHELL) pretty often and to be able to modify this environment variables (those with UPPER CASE letters) is important.
+Environment variables are useful, even for me. I check the home directory (HOME) or the shell that is actually running (SHELL) pretty often and to be able to modify this environment variables (those with UPPER CASE letters) is important.
 ```
     
 <br>
@@ -344,4 +344,23 @@ declare -x LESS="-iqM"
 </details>
 
 
+# 27.02.23
 
+
+<details>
+  <summary>Restart terminal sessiom</summary>
+    
+<br>
+    
+```
+I would like to see if a new environment variable dissappears if the terminal session is closed. To close the session just type:
+```
+    
+<br>
+    
+```console
+# my shell is zsh
+exec zsh -1
+```
+
+</details>
