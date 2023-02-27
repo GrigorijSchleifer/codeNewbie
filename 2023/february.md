@@ -362,5 +362,11 @@ I would like to see if a new environment variable dissappears if the terminal se
 # my shell is zsh
 exec zsh -1
 ```
+  
+```console
+# to add an environmental variable permanently create one and export it
+GS='grigorijschleifer'
+export GS
+```
 
 </details>
