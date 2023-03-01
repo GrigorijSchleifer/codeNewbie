@@ -304,8 +304,11 @@ This is a link to a page with a collection of stopwords for 40 different languag
 
 </details>
 
-# 24.02.23
 
+
+
+
+# 24.02.23
 
 <details>
   <summary>Quots do matter in bash</summary>
@@ -322,8 +325,11 @@ Hey, this is a cool one. I thougut that double quotes and single quote can be us
 
 </details>
 
-# 26.02.23
 
+
+
+
+# 26.02.23
 
 <details>
   <summary>Declaring environment variables</summary>
@@ -331,7 +337,7 @@ Hey, this is a cool one. I thougut that double quotes and single quote can be us
 <br>
     
 ```
-Environment variables are useful, even for me. I check the home directory (HOME) or the shell that is actually running (SHELL) pretty often and to be able to modify this environment variables (those with UPPER CASE letters) is important.
+Environment variables are useful, even for me. Often I need to check the home directory (HOME) or the shell that is actually running (SHELL) and being able to modify this environment variables is important.
 ```
     
 <br>
@@ -344,29 +350,25 @@ declare -x LESS="-iqM"
 </details>
 
 
+
+
+
+
 # 27.02.23
 
-
 <details>
-  <summary>Restart terminal sessiom</summary>
+  <summary>Restart terminal session</summary>
     
 <br>
     
 ```
-I would like to see if a new environment variable dissappears if the terminal session is closed. To close the session just type:
+Sometimes I would like to terminate my zsh session. To do so, just type:
 ```
     
 <br>
-    
-```console
-# my shell is zsh
-exec zsh -1
-```
-  
-```console
-# to add an environmental variable permanently create one and export it
-GS='grigorijschleifer'
-export GS
-```
 
 </details>
+
+
+
+
