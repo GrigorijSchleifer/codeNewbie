@@ -337,7 +337,8 @@ Hey, this is a cool one. I thougut that double quotes and single quote can be us
 <br>
     
 ```
-Environment variables are useful, even for me. Often I need to check the home directory (HOME) or the shell that is actually running (SHELL) and being able to modify this environment variables is important.
+Environment variables are useful, even for me. Often I need to check the home directory (HOME) or the shell 
+that is actually running (SHELL) and being able to modify this environment variables is important.
 ```
     
 <br>
