@@ -1,24 +1,18 @@
+# 01.03.23
 
+<details>
+  <summary>Permanently add environment variables to ~/.zshenv</summary>
+<br>
 
-```console
-# my shell is zsh
-exec zsh -1
-```
-  
-```console
-# to add an environmental variable permanently create one and export it
-GS='grigorijschleifer'
-export GS
-```
-
-```
-So if you want to add your own variable that you can use later after bash session was terminated, you have to add this variable 
-to a file that is source each time you start your shell. For me this is ~/.zshev file.
+```txt
+So if you want to add your own variables that you can use later after bash session was terminated, you have to add them to a file that is sourced each time you start your shell. For me this is ~/.zshev file.
 ```
 
 ```console
+# the output of echo (GS=grigorijschleifer) will be saved in ~/.zshenv. 
+echo 'GS=grigorijschleifer' >> ~/.zshenv
 
-GS='grigorijschleifer'
-export GS
+# to make changes permanently just source the .zshenv file and you will have your own environmental variable to your disposal
+source ~/.zshenv 
 ```
 </details>
