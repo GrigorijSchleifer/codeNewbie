@@ -1,6 +1,6 @@
 # 12.07.23
 
 <details>
-  <summary>Back in business</summary>
+  <summary>Back in business </summary>
 <br>
 </details>
