@@ -8,7 +8,6 @@ The focus of this teaching platform will be to introduce digital tools from the 
 
 Our project aims to help participants learn the necessary tools for medical data analysis and use them effectively in a healthcare system where medical data complexity is increasing, and analytical thinking is becoming more critical.
 
-This abstract outlines the online platform I will use as my coding journey diary. Please check for grammar errors while maintaining a friendly tone. Avoid making substantial changes
 <br>
 
 | Year | jan | feb | mar | apr | may | jun | jul | aug | sep | oct | nov | dec
