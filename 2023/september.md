@@ -1,11 +1,11 @@
 # 26.09.2023
 <details>
-  <summary>Remapping Esc in RStudio</summary>
+  <summary>"Revamping Escape in Google Colab: A Vim-tastic Adventure!"</summary>
 <br>
 
 press : to switch to command mode then type
 ```txt
-:imap jk <Esc>
+:imap kj <Esc>
 ```
 
 </details>
