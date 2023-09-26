@@ -10,6 +10,6 @@ Our project aims to help participants learn the necessary tools for medical data
 
 <br>
 
-| Year | january | february | march | april | may | june | july | august | september | october | november | december
+| Year | jan | feb | mar | apr | may | jun | jul | aug| sep| oct | nov | dec
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
 | 2023 | [link](https://github.com/GrigorijSchleifer/codeNewbie/blob/main/2023/january.md) | [link](https://github.com/GrigorijSchleifer/codeNewbie/blob/main/2023/february.md) | [link](https://github.com/GrigorijSchleifer/codeNewbie/blob/main/2023/march.md) | ... | ... | ... | ... | ... | ... | ... |
