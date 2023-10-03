@@ -16,5 +16,5 @@ press : to switch to command mode then type
 
 ```command line
 ctrl 1 (for code editor)
-ctrl 2 (for terminal)
+ctrl 2 (for console)
 ```
