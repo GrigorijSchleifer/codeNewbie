@@ -11,4 +11,10 @@ press : to switch to command mode then type
 </details>
 
 
+### 01.10.23
+#### Switching between the terminal and the code editor with without using your mouse (Mac)
 
+```command line
+ctrl 1 (for code editor)
+ctrl 2 (for terminal)
+```
