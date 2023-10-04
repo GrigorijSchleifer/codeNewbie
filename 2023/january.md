@@ -56,16 +56,12 @@ Display all colorschemes that are used in vim: in vim's normal mode press `:colo
 
 ### Vs Code: 
 
-##### Installing shell command `code` in PATH to be able to open Vs Code from the terminal
-##### Press `Command + Shift + P` inside Vs Code, enter "shell" and than `Enter`
+##### Installing shell command `code` in PATH will enable you to open VsCode from the terminal. Press `Command + Shift + P` inside Vs Code, enter "shell" and than `Enter`
 
 <img width="651" alt="image" src="https://user-images.githubusercontent.com/36699154/214015648-841a842e-c319-44be-86f5-a95080f9eb27.png">
 
 
-```code
-brew install tmux
-git clone https://github.com/tmux-plugins/tmp ~/.tmux/plugins/tpm
-```
+
 
 ## 26.01.23
 
@@ -109,6 +105,9 @@ with open('filename.txt') as f:
 #### and if you try to count line numbers it will count all characters
 
 <img width="504" alt="image" src="https://user-images.githubusercontent.com/36699154/215355600-93092a10-c06b-4d05-a0d4-6440a8d6fc6b.png">
+
+
+
 
 # 30.01.23
 #### When pushing changes to remote on a server, github password is your personal access token!
