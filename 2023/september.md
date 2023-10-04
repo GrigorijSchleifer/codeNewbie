@@ -1,4 +1,4 @@
-# 26.09.2023
+### 26.09.2023
 #### Revamping Escape in Google Colab: A Vim-tastic Adventure!
 
 ```txt
@@ -18,7 +18,7 @@ ctrl 2 (for console)
 
 <br>
 
-# 02.10.23
+### 02.10.23
 #### Fastest way to insert google docstrins so far. Install autoDocstring extension for vsCode
 #### press `cmd shift 2` below your funcition definition
 
