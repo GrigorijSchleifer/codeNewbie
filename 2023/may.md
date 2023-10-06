@@ -1,1 +1,1 @@
-# burned out and quit my job for a dream of woking less, having time for kids and earning more ... we will see
+# burned out
