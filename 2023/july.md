@@ -4,5 +4,5 @@
 <br>
 
 ```txt
-Type in :imap jj <Esc> and Esc has to be uppercase
+Type in :imap kj <Esc> and Esc has to be uppercase
 ```
