@@ -20,3 +20,10 @@ ctrl 2 (for console)
 ```command line
 brew cleanup
 ```
+
+### 19.10.23
+
+#### VS Code: CodeSnap - a nice extension to visualize code snippets
+#### After installation just highlight your code, right click and there you have it!
+
+![image](https://github.com/GrigorijSchleifer/codeNewbie/assets/36699154/03085d7f-4f56-41d3-bc52-b75e7dc029a1)
