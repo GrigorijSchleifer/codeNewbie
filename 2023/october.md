@@ -26,7 +26,7 @@ brew cleanup
 #### VS Code: CodeSnap - a nice extension to visualize code snippets
 #### After installation just highlight your code, right click and there you have it!
 
-![image](https://github.com/GrigorijSchleifer/codeNewbie/assets/36699154/03085d7f-4f56-41d3-bc52-b75e7dc029a1)
+<img width="777" alt="image" src="https://github.com/GrigorijSchleifer/codeNewbie/assets/36699154/03085d7f-4f56-41d3-bc52-b75e7dc029a1">
 
 
 ### 23.10.12:  iTerm: Customizing terminal prompt (PS1) with emojis to add a touch of personalization
@@ -41,7 +41,7 @@ My goal was to get rid of the user and hostname display and replace it with some
 
 Before that the settings looked like this.
 
-<img width="777" alt="image" src="https://github.com/GrigorijSchleifer/codeNewbie/assets/36699154/9a171b16-9851-4908-81e6-229749c60b4a">
+<img width="1013" alt="image" src="https://github.com/GrigorijSchleifer/codeNewbie/assets/36699154/9a171b16-9851-4908-81e6-229749c60b4a">
 
 After the edit:
 
