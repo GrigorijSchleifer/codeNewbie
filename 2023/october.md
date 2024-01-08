@@ -1,4 +1,4 @@
-### 01.10.23
+## 01.10.23
 #### RStudio: Switching between the console and the code editor without using your mouse (Mac)
 
 ```command line
