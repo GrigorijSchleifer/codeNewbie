@@ -4,6 +4,5 @@
 
 > How does it look when one adds '>' in Markdown?"
 
-| Cool | Stuff |
-| --- | --- |
-| 1 | 2 |
+# 27.01.24
+
