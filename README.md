@@ -1,3 +1,4 @@
+<title>dosemycode: A Doctor's Journey into Coding"</title>
 <p>Welcome to my coding diary! Here, I document my journey as a doctor exploring the realms of medical informatics, Python, R, and various other topics. This repository serves as a log of my learning process, experiments, and projects related to healthcare and programming.</p>
 
 <li><a href="#introduction">Introduction</a></li>
