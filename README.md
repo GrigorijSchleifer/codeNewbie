@@ -9,7 +9,6 @@
 
 <h2 id="introduction">Introduction</h2>
 <h2 id="medical-informatics">Medical Informatics</h2>
-<p>Explore my endeavors in medical informatics, where I combine medical expertise with data science and technology to solve healthcare challenges:</p>
 
 <li><a href="link/to/medical_informatics_projects">Medical Informatics Projects</a></li>
 <h2 id="python">Python</h2>
