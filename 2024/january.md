@@ -4,5 +4,3 @@
 
 > How does it look when one adds '>' in Markdown?"
 
-# 27.01.24
-
