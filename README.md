@@ -8,7 +8,7 @@ Please keep in mind that I am constantly learning. I would not consider myself a
 <li><a href="#medical-informatics">Medical Informatics</a></li>
 
 
-<li><a href="https://github.com/grigorijschleifer/codenewbie/blob/main/vim.md">VIM</a></li>
+<li><a href="https://github.com/GrigorijSchleifer/codeNewbie/blob/main/2024/VIM.md">VIM</a></li>
 
 
 <li><a href="#python">Python</a></li>
