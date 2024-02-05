@@ -6,6 +6,11 @@ Please keep in mind that I am constantly learning. I would not consider myself a
 
 <li><a href="#VIM">Introduction</a></li>
 <li><a href="#medical-informatics">Medical Informatics</a></li>
+
+
+<li><a href="https://github.com/grigorijschleifer/codenewbie/blob/main/vim.md">VIM</a>
+
+
 <li><a href="#python">Python</a></li>
 <li><a href="#r">R</a></li>
 <li><a href="#learning-journey">Learning Journey</a></li>
