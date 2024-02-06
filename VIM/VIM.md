@@ -1,4 +1,4 @@
-#### Remapping Esc everywhere
+# Remapping Esc everywhere
 <br>
 
 ```txt
