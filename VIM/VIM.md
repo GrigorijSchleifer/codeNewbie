@@ -21,3 +21,5 @@ Type in :imap kj <Esc> and Esc has to be uppercase
 # 08.02.24
 
 ### Nice way to replace a character. Just move to a character you like to replace and press _r_ plus the character you want. Thats all. 
+
+### Another useful combination is ```Ctrl + r```. Pressing ```Ctrl + r``` returns changes that were undone.
