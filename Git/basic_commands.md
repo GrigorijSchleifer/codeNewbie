@@ -7,8 +7,7 @@ git config --global user.name 'Boston Bruins'
 git config --global user.email 'gobruins@some_address.edu'
 ```
 
-
-
+# this is not staged yet
 
 Check Git settings
 
