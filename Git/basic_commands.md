@@ -8,6 +8,7 @@ git config --global user.email 'gobruins@some_address.edu'
 ```
 
 # this is not staged yet
+# after screwing up and not staging ...
 
 Check Git settings
 
