@@ -1,17 +1,22 @@
 # 10.02.24
 
-> ### Understanding Git Branches and Remotes:
+> # Understanding Git Branches and Remotes:
 
-While I was trying to push my Java changes to git there was no green mark after I pushed some silly Java beginner code. And I was wondering how this was possible and why I was not able to get this empty looking square to light up green. I had a feeling that this had something to do with branches and git magic not flowing through me properly. 
+If you are like me, you like the **contribution graph** because it gives you some motivation and highlights your work in a easy way. 
 
-I found a nice command to show on what branch I was working on and that I had two brances `main` and `master`. And I was on `master`. Why? And why do my commint not show up on the, so good looking and motivating **contribution graph**.
+While I was trying to push some code changes in a new repository (created in IntellyJ) there was no green mark after I pushed the code. And I was wondering how this was possible. I had a feeling that this had something to do with branches and the git magic not flowing through me properly :)
 
+I found a nice command to show the branch I was working on and to my surprise I had two branches `main` AND `master`. Somehow IntellyJ created both and placed me (checked out) on `master` as my HEAD branch. And HEAD is the currently active or "checked-out" branch. There can be many branches but only one HEAD.
 
-```git
+```bash
+# Command A: shows all available branches 
 git branches
+
+# Command B: changes into a specified branche
+git checkout <branch-name>
 ```
 
-And it showed that I was on 
+And it showed that I was on `master` and all my commits did go to that `master` branch. This means that green contribution mark is "granted" if I commit to the `main` branch. But how? 
 
 > Several branches with confusing names
 
