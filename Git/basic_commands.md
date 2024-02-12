@@ -19,7 +19,7 @@ git config --global --list
 git log --oneline
 ```
 
-<img width="600" alt="image" src="https://github.com/GrigorijSchleifer/codeNewbie/assets/36699154/a0c43741-0d1e-4a16-a423-de42ba08222b">
+<img width="1000" alt="image" src="https://github.com/GrigorijSchleifer/codeNewbie/assets/36699154/a0c43741-0d1e-4a16-a423-de42ba08222b">
 
 ```bash
 # this will revert back to the project's state before "class files deleted" commit
