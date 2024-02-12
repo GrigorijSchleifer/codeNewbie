@@ -23,6 +23,9 @@ git log --oneline
 
 ```bash
 # this will revert back to the project's state before "class files deleted" commit
+# and bring you into a "detached HEAD state" :)
 git checkout bf6887f
 ```
+
+
 

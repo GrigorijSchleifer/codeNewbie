@@ -10,5 +10,11 @@ To investigate, I used the `git branch` command to display the branch I was work
 # Command A: shows all available branches 
 git branch
 ```
-Every repository has a default branch and only contributions to the dafault branch are 
-displayed in the **contribution graph**. So I changed my difault branch to `master` and it worked. All my previous commits showed up on the graph.
+
+I discovered that only contributions to the default branch are counted on the **contribution graph**. After changing my default branch to `master`, all my previous commits appeared on the graph.
+
+<img width="100%" alt="image" src="https://github.com/GrigorijSchleifer/codeNewbie/assets/36699154/b6eaede1-86d4-4456-9099-9f9f8bc735fe">
+
+
+> # Detached HEAD state
+
