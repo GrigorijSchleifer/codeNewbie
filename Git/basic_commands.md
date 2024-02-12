@@ -10,8 +10,16 @@ git config --global user.email 'gobruins@some_address.edu'
 # this is not staged yet
 # after screwing up and not staging ...
 
-Check Git settings
 
 ```bash
-$ git config --global --list
+# Check and list global Git configuration settings
+git config --global --list
+```
+
+
+```bash
+# Formats and displays commits, emphasizing essential information
+# Commits hashes are represented by the first 7-character
+# You can use the first 7 characters of the hash instead of the full identifier
+git log --oneline
 ```
