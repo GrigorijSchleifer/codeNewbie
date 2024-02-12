@@ -7,10 +7,6 @@ git config --global user.name 'Boston Bruins'
 git config --global user.email 'gobruins@some_address.edu'
 ```
 
-# this is not staged yet
-# after screwing up and not staging ...
-
-
 ```bash
 # Check and list global Git configuration settings
 git config --global --list
@@ -19,7 +15,14 @@ git config --global --list
 
 ```bash
 # Formats and displays commits, emphasizing essential information
-# Commits hashes are represented by the first 7-character
-# You can use the first 7 characters of the hash instead of the full identifier
+# You can opt for the shorter 7-character commit hash instead of the longer identifier
 git log --oneline
 ```
+
+<img width="600" alt="image" src="https://github.com/GrigorijSchleifer/codeNewbie/assets/36699154/a0c43741-0d1e-4a16-a423-de42ba08222b">
+
+```bash
+# this will revert back to the project's state before "class files deleted" commit
+git checkout bf6887f
+```
+
