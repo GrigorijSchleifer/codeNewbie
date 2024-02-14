@@ -23,20 +23,3 @@ git log --oneline
 
 # 
 
-```bash
-# this will revert back to the project's state before "class files deleted" commit
-git checkout bf6887f
-```
-#
-
-* This will bring you into a "detached HEAD state" :)
-* Be careful not to make any edits in this snapshot, doing so will force a new branch
-
-# 
-
-```bash
-# "git log --oneline" will not list the most recent state of our repo
-# To view all snapshots, both forward and backward, use the --all option.
-git log --oneline --all
-```
-
