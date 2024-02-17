@@ -21,7 +21,7 @@ I discovered that only contributions to the default branch are counted on the **
 
 > ### Detached HEAD state
 
-It is possible to check out a specific commit using its hash string, which will place you in a 'detached HEAD state' by moving HEAD to the commit with the specified hash. Be cautious when making edits in this snapshot, as doing so will create a new branch named `detached`.
+It is possible to check out a specific commit directly using its hash string, which will place you in a 'detached HEAD state' by moving HEAD to the commit with the specified hash. Be cautious when making edits in this snapshot, as doing so will create a new branch named `detached`.
 
 ```bash
 # this will 

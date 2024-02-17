@@ -1,5 +1,37 @@
 # Basics
 
+
+Creating and switching to the newly created branch in one line
+
+```bash
+git checkout -b <branch name>
+```
+
+Skip adding changes in files (it looks like new files are added as well ... not sure why ...)
+
+```bash
+git commit -am "Your commit message"
+```
+
+List remote branches
+
+```bash
+git branch -r
+```
+
+Renaming the HEAD branch (Branch you switched == checked-out into)
+
+```bash
+git branch -m <new-brach-name>
+```
+
+Renaming a branch other then the HEAD (currently checked-out)
+
+```bash
+git branch -m <branch-name-to-rename> <new-brach-name>
+```
+
+
 > Changing name and email in global settings. This info is used to keep track of the author behind any changes made to a Git repository. 
 
 ```bash
