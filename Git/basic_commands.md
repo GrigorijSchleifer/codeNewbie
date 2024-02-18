@@ -1,5 +1,29 @@
 # Basics
 
+Should be done on every repository (not sure why but ask Scott Chacon). Speeds things up. 
+
+```bash
+git maintenance start
+```
+
+Force pushing but with caution. It will not override someones edits. E.g. safe force push. 
+
+```bash
+git push --force-with-lease
+```
+
+
+Merging a branches. Check-out the branch you want to merge into. 
+
+```bash
+git merge <source-branch>
+```
+
+Tracking a remote branch locally. Will create a local branch that will track a romote branch
+
+```bash
+git branch --track <name-branch> <origin/branch-name>
+```
 
 Creating and switching to the newly created branch in one line
 
