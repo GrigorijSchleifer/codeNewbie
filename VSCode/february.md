@@ -1,3 +1,25 @@
+Adding code snippets. Handy!
+
+```bash
+# open command palette
+shift option P
+```
+
+<br>
+
+
+
+Paste *configure user snippets*. Amazing video [HERE](https://www.youtube.com/watch?v=TGh2NpCIDlc)
+
+
+<br>
+
+<img width="812" alt="image" src="https://github.com/GrigorijSchleifer/codeNewbie/assets/36699154/176a7f82-f6e6-48e0-b2ad-4e26212dfe26">
+
+
+
+bb
+
 # 01.02.23
 
 

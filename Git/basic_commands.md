@@ -1,5 +1,10 @@
 # Basics
 
+Adding hunks (only specific changes) to the staging area. This can help making commits more specific and organazed.
+
+
+
+
 Should be done on every repository (not sure why but ask Scott Chacon). Speeds things up. 
 
 ```bash
