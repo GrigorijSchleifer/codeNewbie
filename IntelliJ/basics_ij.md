@@ -1,0 +1,1 @@
+Typing `/**` + then pressing `Enter` above a method signature will create Javadoc stubs
