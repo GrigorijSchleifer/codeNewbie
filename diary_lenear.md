@@ -1,5 +1,9 @@
 ## 26.02.24
 
+> VIM
+
+This one is amazing! Enter the command mode by pressing `:` and use `up` or `down` keys to see your old commands. This will save me so much time!!!
+
 > Terminal
 
 Amazing way to use the last command. Just type `!!` and hit `tab` or `enter`. Even better if you like to use the command befor your last entry just type `!-2`. Or `!-4` and so on. Cool right!
