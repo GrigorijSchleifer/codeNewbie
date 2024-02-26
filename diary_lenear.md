@@ -1,10 +1,18 @@
-# 25.02.24
+## 26.02.24
+
+> Terminal
+
+Amazing way to use the last command. Just type `!!` and hit `tab` or `enter`. Even better if you like to use the command befor your last entry just type `!-2`. Or `!-4` and so on. Cool right!
+
+
+## 25.02.24
+
+> IntelliJ
 
 * Typing `/**` + then pressing `Enter` above a method signature will create Javadoc stubs
 * 'live templates' to generate several types of code snippets. `fori` for a for loop. Similar to `sout` for the print statement. 
 
-
-
+> VSCode
 
 Adding code snippets. Handy!
 
