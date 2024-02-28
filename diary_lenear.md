@@ -1,3 +1,15 @@
+## 28.02.24
+
+> GIT
+
+The `.gitignore` file contains names of folders and other files that Git ignores. These files are not automatically added to the staging area or included in commits. However, entries starting with an exclamation mark ("!") are an exception. These files will be included in a commit even though they are inside a folder that is otherwise ignored.
+
+```bash
+# file in out/ are excluded except `**/src/main/**/out/` and `**/src/test/**/out/`
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+```
 ## 26.02.24
 
 > VIM
