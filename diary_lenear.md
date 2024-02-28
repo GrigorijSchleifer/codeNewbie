@@ -1,5 +1,11 @@
 ## 28.02.24
 
+> Terminal
+
+`ctrl a` moves the curser to the end of the line and `ctrl e` moves it  to the beginning of the line.
+
+<br>
+
 > MAC
 
 Reverse delete. Or some other name for deleting stuff to the right of the cursor. By typing `cntr d` ... baaaam!
