@@ -1,5 +1,11 @@
 ## 28.02.24
 
+> MAC
+
+Reverse delete. Or some other name for deleting stuff to the right of the cursor. By typing `cntr d` ... baaaam!
+
+<br>
+
 > GIT
 
 The `.gitignore` file contains names of folders and other files that Git ignores. These files are not automatically added to the staging area or included in commits. However, entries starting with an exclamation mark ("!") are an exception. These files will be included in a commit even though they are inside a folder that is otherwise ignored.
@@ -10,6 +16,9 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 ```
+
+<br>
+
 ## 26.02.24
 
 > VIM
