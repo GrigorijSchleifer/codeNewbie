@@ -14,6 +14,8 @@ I would not consider myself an expert in any of the topics covered here. I'm sim
 <li><a href="#python">Python</a></li>
 <li><a href="#">Python</a></li>
 <li><a href="#r">R</a></li>
+
+<li><a href="https://github.com/GrigorijSchleifer/codeNewbie/blob/main/Terminal/terminal_basics.md">Terminal</a></li>
 <li><a href="#learning-journey">Learning Journey</a></li>
 
 <h2 id="introduction">Introduction</h2>
