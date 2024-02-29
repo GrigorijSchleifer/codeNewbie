@@ -1,6 +1,6 @@
 ## 29.02.24
 
-> Terminal
+> <a href="https://github.com/GrigorijSchleifer/codeNewbie/blob/main/Terminal/terminal_basics.md">Terminal</a>
 
 
 SSH learning session and some bulletpoints for me to remember. 
