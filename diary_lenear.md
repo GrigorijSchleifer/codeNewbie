@@ -1,11 +1,29 @@
 ## 29.02.24
 
+> <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/JAVA">Java</a>
+
+In Java, directly printing an array with System.out.println() will not print the contents of the array but will print its hashcode instead. To print the contents of the array, you need to use `Arrays.toString()` method from the `java.util.Arrays` class.
+
+```java
+System.out.println(Arrays.toString(array));
+```
+
+<br>
+
+
 > <a href="https://github.com/GrigorijSchleifer/codeNewbie/blob/main/Terminal">Terminal</a>
 
 
 SSH learning session and some bulletpoints for me to remember. 
 
-* 
+* SSH connection is implemented using a client-server model
+* remote machine must be running a piece of software called an SSH daemon
+* The user’s computer must have an SSH client
+* passwords (less secure and not recommended) or SSH keys, which are very secure
+* always setting up SSH key-based authentication for most configurations
+* user must have an SSH key pair locally.
+* public key must be copied to `~/.ssh/authorized_keys` on remote server
+
 
 <br>
 
