@@ -1,6 +1,6 @@
 ## 29.02.24
 
-> <a href="https://github.com/GrigorijSchleifer/codeNewbie/blob/main/Terminal/terminal_basics.md">Terminal</a>
+> <a href="https://github.com/GrigorijSchleifer/codeNewbie/blob/main/Terminal">Terminal</a>
 
 
 SSH learning session and some bulletpoints for me to remember. 
