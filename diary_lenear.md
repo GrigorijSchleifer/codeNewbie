@@ -1,3 +1,15 @@
+## 29.02.24
+
+> Terminal
+
+
+SSH learning session and some bulletpoints for me to remember. 
+
+* 
+
+<br>
+
+
 ## 28.02.24
 
 > Terminal
