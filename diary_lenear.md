@@ -25,7 +25,7 @@ SSH learning session and some bulletpoints for me to remember.
 * public key must be copied to `~/.ssh/authorized_keys` on remote server
 
 
-<br<br>>
+<br<br>
 
 
 ## 28.02.24
@@ -34,13 +34,13 @@ SSH learning session and some bulletpoints for me to remember.
 
 `ctrl a` moves the curser to the end of the line and `ctrl e` moves it  to the beginning of the line.
 
-<br<br>>
+<br<br>
 
 > MAC
 
 Reverse delete. Or some other name for deleting stuff to the right of the cursor. By typing `cntr d` ... baaaam!
 
-<br<br>>
+<br<br>
 
 > GIT
 
@@ -53,7 +53,7 @@ out/
 !**/src/test/**/out/
 ```
 
-<br<br>>
+<br<br>
 
 ## 26.02.24
 
@@ -82,14 +82,14 @@ Adding code snippets. Handy!
 shift option P
 ```
 
-<br<br>>
+<br<br>
 
 
 
 Paste *configure user snippets*. Amazing video [HERE](https://www.youtube.com/watch?v=TGh2NpCIDlc)
 
 
-<br<br>>
+<br<br>
 
 <img width="812" alt="image" src="https://github.com/GrigorijSchleifer/codeNewbie/assets/36699154/176a7f82-f6e6-48e0-b2ad-4e26212dfe26">
 
