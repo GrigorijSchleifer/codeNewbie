@@ -1,11 +1,42 @@
 ## 01.03.24
 
+> <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/VIM">VIM</a>
+
+* `ctrl r` Redo Changes. The redo feature is the oposite of undo (allows you to reverse the previous action)
+
+<br><br>
+
+> <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/TMUX">TMUX</a>
+
+Sourcing the ~/.tmux.conf file requires a different command compared to other dotfiles (configuration files with a leading dot in their names). 
+
+```bash
+tmux source-file ~/.tmux.conf
+```
+
+TMUX basic commands (MAC)
+
+* `ctrl a` or `ctrl t` prefix (needed for all command to follow)
+
+* `ctrl a` + `shift %` splitting panes left and right
+* `ctrl a` + `shift "` splitting panes top and down 
+* `ctrl a` + `arrow keys` navigating between panes down
+* `ctrl d` close a pane or type `exit`
+* `ctrl a` + `c` creating a new window (window contains pains)
+* `ctrl a`+ `n` switch to the next window
+* `ctrl a`+ `p` switch to the previous window
+* `ctrl a`+ `d` detach from a session (everything will still run in the background)
+
+* `tmux ls` List the currently running sessions
+* `tmux attach -t <sessionNumber>` attacht to a specific session  
+* `tmux new -s database` attacht to a specific session  
 
 
+<br><br>
 
 ## 29.02.24
 
-> <a href="https://github.com/GrigorijSchleifer/codeNewbie/blob/main/Terminal">Terminal</a>
+> <a href="https://github.com/GrigorijSchleifer/codeNewbie/blob/main/Terminal">TERMINAL</a>
 
 Terminal Keybindings
 
@@ -14,7 +45,9 @@ Terminal Keybindings
 * `ctrl b` moves the cursor to the left
 * `ctrl f` moves the cursor to the right
 
-> <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/JAVA">Java</a>
+<br><br>
+
+> <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/JAVA">JAVA</a>
 
 In Java, directly printing an array with System.out.println() will not print the contents of the array but will print its hashcode instead. To print the contents of the array, you need to use `Arrays.toString()` method from the `java.util.Arrays` class.
 
@@ -25,7 +58,7 @@ System.out.println(Arrays.toString(array));
 <br><br>
 
 
-> <a href="https://github.com/GrigorijSchleifer/codeNewbie/blob/main/Terminal">Terminal</a>
+> <a href="https://github.com/GrigorijSchleifer/codeNewbie/blob/main/Terminal">TERMINAL</a>
 
 
 SSH learning session and some bulletpoints for me to remember. 
@@ -44,7 +77,7 @@ SSH learning session and some bulletpoints for me to remember.
 
 ## 28.02.24
 
-> Terminal
+> <a href="https://github.com/GrigorijSchleifer/codeNewbie/blob/main/Terminal">TERMINAL</a>
 
 `ctrl a` moves the curser to the end of the line and `ctrl e` moves it  to the beginning of the line.
 
@@ -276,18 +309,14 @@ $ man -k 'keyword'
 Reverse search for terminal commands you have typed so far
 ```
 
-```bash
+
 # by pressing this again next command will be displayed
 # by the way the same command in vim is used to redo the last change :)
-Control-r <...>
-```
+`ctrl r`
 
 
 # 14.02.23
 
-```
-Repeat last command in the terminal
-```
 
 ```bash
 !!

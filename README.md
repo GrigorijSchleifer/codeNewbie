@@ -4,30 +4,13 @@
 
 I would not consider myself an expert in any of the topics covered here. I'm simply trying my best. If you find any mistakes (content- or language-related) please contact me via twitter or send me an email, thanks.</p>
 
-<li><a href="#VIM">Introduction</a></li>
-<li><a href="#medical-informatics">Medical Informatics</a></li>
 
 
 <li><a href="https://github.com/GrigorijSchleifer/codeNewbie/blob/main/VIM/VIM.md">VIM</a></li>
+<li><a href="https://github.com/GrigorijSchleifer/codeNewbie/blob/main/Terminal">TERMINAL</a></li>
+<li><a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/VIM">VIM</a></li>
 
-
-<li><a href="#python">Python</a></li>
-<li><a href="#">Python</a></li>
-<li><a href="#r">R</a></li>
-
-<li><a href="https://github.com/GrigorijSchleifer/codeNewbie/blob/main/Terminal/terminal_basics.md">Terminal</a></li>
 <li><a href="#learning-journey">Learning Journey</a></li>
-
-<h2 id="introduction">Introduction</h2>
-<h2 id="medical-informatics">Medical Informatics</h2>
-
-<li><a href="link/to/medical_informatics_projects">Medical Informatics Projects</a></li>
-<h2 id="python">Python</h2>
-<li><a href="link/to/python_projects">Python Projects</a></li>
-<h2 id="r">R</h2>
-<li><a href="link/to/r_projects">R Projects</a></li>
-<h2 id="learning-journey">Learning Journey</h2>
-<li><a href="link/to/learning_resources">Learning Resources</a></li>
 
 
 <br>
