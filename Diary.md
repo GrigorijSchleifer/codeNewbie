@@ -4,7 +4,7 @@
 
 * `ctrl r` Redo Changes. The redo feature is the oposite of undo (allows you to reverse the previous action)
 
-<br><br>
+<br>
 
 > <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/TMUX">TMUX</a>
 
@@ -28,9 +28,9 @@ TMUX basic commands (MAC)
 * `ctrl a`+ `d` detach from a session (everything will still run in the background)
 
 * `tmux ls` List the currently running sessions
-* `tmux attach -t <sessionNumber>` attacht to a specific session  
-* `tmux new -s database` attacht to a specific session  
-
+* `tmux attach -t <sessionNumber>` attacht to a specific session number (presented by `tmux ls`¡¡¡)
+* `tmux new -s <sessionName>` attacht to a specific session  
+* `tmux rename-session -t 0 <sessionName>` rename a session using its number
 
 <br><br>
 
