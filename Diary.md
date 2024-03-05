@@ -1,3 +1,15 @@
+
+
+
+## 04.03.24
+
+> <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/Git">GIT</a>
+
+* `git commit -avm "message"` nice way to skip the staging area (`a` flag includes all changed files), include (the `v` flag) the code differences in a commit and add a message (`m` flag)
+* `git rm --cached <filename>` will remove a specified file from the staging area and move it bacj to the working area
+* `git log -p -2` shows the difference (`-p` the patch output) introduced in each commit and limits the number of log entries displayed (`-2` flag)
+<br>
+
 ## 01.03.24
 
 > <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/VIM">VIM</a>
