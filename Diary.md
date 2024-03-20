@@ -1,5 +1,61 @@
+## 19.03.24
+
+```sql
+CREATE TABLE transactions (
+  id INTEGER,
+  recipient_id INTEGER,
+  sender_id INTEGER,
+  note TEXT,
+  amount INTEGER
+);
+```
+* Rename table, rename column, add column
+
+```sql
+ALTER TABLE people
+RENAME TO users;
+
+ALTER TABLE users
+RENAME COLUMN handle TO username;
+
+ALTER TABLE users
+ADD COLUMN password TEXT;
+
+ALTER TABLE transactions
+  ADD COLUMN was_successful BOOLEAN;
+
+ALTER TABLE transactions
+ADD COLUMN transaction_type TEXT;
+```
 
 
+
+
+## 09.05.24
+
+
+> <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/VIM">VIM</a>
+
+* Jumping from method to method. `[m` jump to the method above.  `]m` jump to the method below. 
+
+<br>
+
+## 05.03.24
+
+> <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/Git">GIT</a>
+
+* Git stores folders as trees and files as blobs (binary large object: object type used to store the contents of each file in a repository plus the SHA-1 computed hash). `git ls-tree <commit hash>` shows that. 
+* A blob represents file contents without metadata.
+* There are three kinds of objects in git (commits, trees and blobs). All of them are stored in gits object datadase.
+* A commit is a snapshot of the project with a SHA1 hash ID
+* A branch is a reference to a commits ID !!!
+* Check this amazing Git [tutorial](https://www.youtube.com/watch?v=RxHJdapz2p0) for more ...
+
+<br>
+
+<img width="777" alt="image" src="https://github.com/GrigorijSchleifer/codeNewbie/assets/36699154/2d6fe441-b521-445c-928e-d4dfd3f815c5">
+
+<br>
 
 ## 04.03.24
 
