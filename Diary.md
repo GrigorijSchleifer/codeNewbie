@@ -1,3 +1,54 @@
+## 20.03.23
+
+Finding my Macs processor architecture
+
+```console
+uname -m
+```
+
+Other options are
+
+```
+-a  -- print all basic information
+-m  -- print hardware class
+-n  -- print network node hostname
+-p  -- print processor type
+-r  -- print operating system release level
+-s  -- print name of the operating system
+-v  -- print detailed operating system version
+```
+
+Showing all postgres processes running on my machine
+
+```console
+ps aux | grep postgres
+```
+
+Finding the postgresql.conf file 
+
+```console
+cd /usr/local/var/postgres
+```
+
+Restarting postgresql
+
+```console
+brew services restart postgresql@14 
+```
+
+Loading postgresql
+
+```console
+brew services load postgresql@14
+```
+
+Showing configuration of plist
+
+```console
+cat ~/Library/LaunchAgents/homebrew.mxcl.postgresql@14.plist
+```
+
+
 ## 19.03.24
 
 ```sql
@@ -86,14 +137,15 @@ TMUX basic commands (MAC)
 
 * `ctrl a` or `ctrl t` prefix (needed for all command to follow)
 
-* `ctrl a` + `shift %` splitting panes left and right
-* `ctrl a` + `shift "` splitting panes top and down 
-* `ctrl a` + `arrow keys` navigating between panes down
+* `ctrl b` + `shift %` splitting panes left and right
+* `ctrl b` + `shift "` splitting panes top and down 
+* `ctrl b` + `arrow keys` navigating between panes down
 * `ctrl d` close a pane or type `exit`
-* `ctrl a` + `c` creating a new window (window contains pains)
-* `ctrl a`+ `n` switch to the next window
-* `ctrl a`+ `p` switch to the previous window
-* `ctrl a`+ `d` detach from a session (everything will still run in the background)
+* `ctrl b` + `c` creating a new window (window contains pains)
+* `ctrl b`+ `n` switch to the next window
+* `ctrl b`+ `p` switch to the previous window
+* `ctrl b`+ `o` switch between panes
+* `ctrl b`+ `d` detach from a session (everything will still run in the background)
 
 * `tmux ls` List the currently running sessions
 * `tmux attach -t <sessionNumber>` attacht to a specific session number (presented by `tmux ls`¡¡¡)
