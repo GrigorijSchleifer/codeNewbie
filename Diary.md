@@ -1,5 +1,6 @@
 ## 31.03.24
 
+> <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/EMACS">EMACS</a>
 
 I want to install DOOM Emacs but can't do it because it requires Emacs version 27 or above. My problem is that I can't upgrade my version of Emacs. Now I am trying to delete Emacs from my server and install a newer version from source (for the first time in my life).
 
@@ -7,6 +8,33 @@ I want to install DOOM Emacs but can't do it because it requires Emacs version 2
 ```bash
 sudo apt remove emacs
 ```
+
+Installation of Emacs 28 from source
+
+1: Dependencies (needed for installation)
+
+```bash
+sudo apt-get install build-essential texinfo libx11-dev li bxpm-dev libjpeg-dev libpng-dev libgif-dev libtiff-dev libgtk2.0-dev libncurses-dev automake autoconf
+```
+
+2: Download and extract source code
+
+```bash
+wget https://ftp.gnu.org/gnu/emacs/emacs-28.1.tar.xz
+```
+
+3: Compile and install
+
+```bash
+cd emacs-28.1
+./configure
+make
+sudo make install
+```
+
+4: Doom needs a more recent version of Git. Installed Git from source using the tutorial from this [link](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-debian-10)
+
+
 
 ## 24.03.24
 

@@ -1,7 +1,14 @@
-# 16.07.2023
+## 31.03.24
+
+Showing your PATH in a nice way
+
+```bash
+echo $PATH | sed 's/:/\n/g' | uniq -c
+```
 
 
-
+> <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/VIM">VIM</a>
+## 16.07.2023
 <details>
   <summary>Commiting like a lazy PRO</summary>
 <br>
