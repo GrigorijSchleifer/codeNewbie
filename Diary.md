@@ -1,3 +1,51 @@
+## 31.03.24
+
+
+I want to install DOOM Emacs but can't do it because it requires Emacs version 27 or above. My problem is that I can't upgrade my version of Emacs. Now I am trying to delete Emacs from my server and install a newer version from source (for the first time in my life).
+
+
+```bash
+sudo apt remove emacs
+```
+
+## 24.03.24
+
+> <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/EMACS">EMACS</a>
+
+### Step 1
+
+```console
+# Install Emacs
+sudo apt install emacs
+```
+
+### Step 2
+
+Create `.config` file inside your home directory. Inside `.config` create a `emacs` directory and inside that create an `init.el` file.
+
+### Step 3
+
+In the `init.el` file add the following: 
+
+
+```elisp
+# telling the system that the config file will be config.org and not init.el
+# config.org will be an org document containing emacs configuration blocks
+
+(org-babel-load-file
+  (expand-file-name                                                                           
+  "config.org"                                                                              │ 
+  user-emacs-directory))
+```
+### Step 4
+
+Create a `config.org` file in `~/.config/emacs` location (same as the config.el)
+
+
+`control x` and `control s`: saving
+`control x` and `control f`: finding files
+
+
 ## 20.03.23
 
 Finding my Macs processor architecture
