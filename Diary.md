@@ -1,3 +1,11 @@
+## 20.04.24
+
+Quit R inside the terminal
+
+```bash
+quit()
+```
+
 ## 31.03.24
 
 > <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/EMACS">EMACS</a>

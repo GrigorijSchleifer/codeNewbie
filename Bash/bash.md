@@ -6,6 +6,18 @@ Showing your PATH in a nice way
 echo $PATH | sed 's/:/\n/g' | uniq -c
 ```
 
+Showing all shells installed on the machine
+
+```bash
+cat /etc/shells
+```
+
+Show the default shell for the user
+
+```bash
+echo $SHELL
+```
+
 
 > <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/VIM">VIM</a>
 ## 16.07.2023
