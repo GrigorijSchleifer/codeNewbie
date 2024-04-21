@@ -1,3 +1,18 @@
+## 21.04.24
+
+> <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
+
+```R
+# returns the directory (all parts) of a file path, but not the file name
+dirname(file.path("","p1","p2","p3", "filename"))
+# "/p1/p2/p3"
+
+# returns the base (last part) of a file path
+basename(file.path("","p1","p2","p3", "filename"))
+# "filename"
+```
+
+
 ## 20.04.24
 
 Quit R inside the terminal
