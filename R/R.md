@@ -1,3 +1,21 @@
+
+
+
+# 02.05.24
+
+> <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
+
+```R
+# modulo: result is the remainder 1
+7 %% 2
+
+# regular division: result is 3.5
+7 / 2
+
+# integer division: result is 3
+7 %/% 2
+```
+
 ## 21.04.24
 
 ```R
