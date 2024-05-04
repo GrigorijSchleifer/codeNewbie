@@ -1,3 +1,20 @@
+# 04.05.24
+
+> <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
+
+```R
+# Load built-in datasets and show what is available
+data()
+```
+
+```R
+# move new column before existing column 1
+mutate(new_column = x - y, .before = 1)
+
+# move new column before specified column by name
+mutate(new_column = x - y, .before = soneColumnName)
+`
+
 # 02.05.24
 
 > <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
