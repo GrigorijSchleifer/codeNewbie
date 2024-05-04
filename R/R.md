@@ -1,4 +1,12 @@
 
+# 04.05.24
+
+> <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
+
+```R
+# Load built-in datasets and show what is available
+data()
+```
 
 
 # 02.05.24
