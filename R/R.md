@@ -1,7 +1,4 @@
-
 # 04.05.24
-
-> <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
 
 ```R
 # Load built-in datasets and show what is available
@@ -14,11 +11,18 @@ mutate(new_column = x - y, .before = 1)
 
 # move new column before specified column by name
 mutate(new_column = x - y, .before = soneColumnName)
-`
+
+# Example
+nycflights13::flights |> 
+  mutate(
+    gain = dep_delay - arr_delay,
+    speed = distance / air_time * 60,
+    .before = 1,
+    .keep = "used"
+  )
+```
 
 # 02.05.24
-
-> <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
 
 ```R
 # modulo: result is the remainder 1
