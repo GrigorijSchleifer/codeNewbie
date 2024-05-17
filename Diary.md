@@ -1,3 +1,16 @@
+# 17.05.24
+
+ > <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/Regex">Regex</a>
+
+```R
+Regular expression "(.)(.)" is used to split the column names into two parts:
+
+The first part "(.)" captures the first character of the column name into a group. The second part "(.)" captures the second character of the column name into another group.
+
+So, for example, if the column name is "x1", the first group "(.)" will capture "x", and the second group "(.)" will capture "1".
+```
+
+
 # 04.05.24
 
  > <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
