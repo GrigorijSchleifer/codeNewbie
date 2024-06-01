@@ -1,3 +1,8 @@
+# 01.06.24
+
+Columns that contain spaces are breaking R's usual rules for variable names; they're non-syntactic names. To refer to these variables, you need to surround them with backticks, `
+
+
 # 17.05.24
 
  > <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/Regex">Regex</a>
