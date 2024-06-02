@@ -1,3 +1,24 @@
+# 02.05.24
+
+If you see X1-Xn in the table output, it means that the header rows are not recognized as header columns.`
+
+```
+     X1    X2    X3
+  <dbl> <dbl> <dbl>
+1     1     2     3
+2     4     5     6
+```
+
+If you want to fix this, you can use the `col_names` argument set to TRUE. The output will be a data frame with the column names as the first row. 
+
+```
+# A tibble: 1 × 3
+    `1`   `2`   `3`
+  <dbl> <dbl> <dbl>
+1     4     5     6
+```
+
+
 # 01.06.24
 
 Columns that contain spaces are breaking R's usual rules for variable names; they're non-syntactic names. To refer to these variables, you need to surround them with backticks, `
