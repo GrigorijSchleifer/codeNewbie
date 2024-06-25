@@ -1,3 +1,11 @@
+# 26.06.24
+
+Error messages in German in RStudio ... nice and useless :)
+```R
+Sys.setenv(LANGUAGE = "de")
+```
+
+
 # 02.05.24
 
 If you see X1-Xn in the table output, it means that the header rows are not recognized as header columns.`
@@ -17,6 +25,14 @@ If you want to fix this, you can use the `col_names` argument set to TRUE. The o
   <dbl> <dbl> <dbl>
 1     4     5     6
 ```
+
+### read_csv vs read_csv2
+
+read_csv2() reads semicolon-separated files. These use ; instead of , to separate fields and are common in countries that use , as the decimal marker.
+
+### read_delim()
+
+For reading a file delimited with |, use read_delim() with argument delim = "|"
 
 
 # 01.06.24
