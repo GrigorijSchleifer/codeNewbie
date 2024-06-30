@@ -1,7 +1,7 @@
 
-# 
+ <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
 
- <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R 30.06.24</a>
+## 30.06.24
 
 When you specify a color within aes(), ggplot2 interprets it as a mapping to a variable in the data, not a fixed color. Since there is no variable named "blue", ggplot2 defaults to a standard color (pink).
 
@@ -30,7 +30,6 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
 Shows all current libraries on my machine
 
 ```R
-
 # https://rstudio.github.io/renv/articles/renv.html
 
 .libPaths()
@@ -48,15 +47,20 @@ renv::snapshot()
 renv::restore()
 ```
 
-# 26.06.24
+## 26.06.24
+
+<a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
 
 Error messages in German in RStudio ... nice and useless :)
+
 ```R
 Sys.setenv(LANGUAGE = "de")
 ```
 
 
-# 02.05.24
+## 02.05.24
+
+<a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
 
 If you see X1-Xn in the table output, it means that the header rows are not recognized as header columns.`
 
@@ -85,14 +89,16 @@ read_csv2() reads semicolon-separated files. These use ; instead of , to separat
 For reading a file delimited with |, use read_delim() with argument delim = "|"
 
 
-# 01.06.24
+## 01.06.24
+
+<a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
 
 Columns that contain spaces are breaking R's usual rules for variable names; they're non-syntactic names. To refer to these variables, you need to surround them with backticks, `
 
 
 # 17.05.24
 
- > <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/Regex">Regex</a>
+<a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/Regex">Regex</a>
 
 ```R
 Regular expression "(.)(.)" is used to split the column names into two parts:
@@ -105,7 +111,7 @@ So, for example, if the column name is "x1", the first group "(.)" will capture 
 
 # 04.05.24
 
- > <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
+<a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
 
 ```R
 # Load built-in datasets and show what is available
@@ -122,7 +128,7 @@ mutate(new_column = x - y, .before = soneColumnName)
 
 # 02.05.24
 
-> <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
+<a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
 
 ```R
 # modulo: result is the remainder 1
@@ -140,7 +146,7 @@ mutate(new_column = x - y, .before = soneColumnName)
 
 ## 21.04.24
 
-> <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
+<a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
 
 ```R
 # returns the directory (all parts) of a file path, but not the file name
