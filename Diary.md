@@ -1,7 +1,7 @@
 
 # 
 
- > <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R"># R 30.06.24</a>
+ <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R 30.06.24</a>
 
 When you specify a color within aes(), ggplot2 interprets it as a mapping to a variable in the data, not a fixed color. Since there is no variable named "blue", ggplot2 defaults to a standard color (pink).
 
