@@ -1,5 +1,31 @@
 
-# 30.06.24
+# 
+
+ > <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R -> 30.06.24</a>
+
+When you specify a color within aes(), ggplot2 interprets it as a mapping to a variable in the data, not a fixed color. Since there is no variable named "blue", ggplot2 defaults to a standard color (pink).
+
+```R
+# will not work
+ggplot(mpg) + 
+  geom_point(aes(x = displ, y = hwy, color = "blue"))
+
+# will not work
+ggplot(mpg, aes(x = displ, y = hwy)) +
+  geom_point(aes(color = "blue"))
+
+# will work
+ggplot(mpg, aes(x = displ, y = hwy)) +
+  geom_point(color = "blue")
+
+# will work
+ggplot(mpg) + 
+  geom_point(aes(x = displ, y = hwy), color = "blue")
+
+# will work
+ggplot(mpg, aes(x = displ, y = hwy)) + 
+  geom_point(color = "blue")
+```
 
 Shows all current libraries on my machine
 
