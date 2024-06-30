@@ -1,3 +1,27 @@
+
+# 30.06.24
+
+Shows all current libraries on my machine
+
+```R
+
+# https://rstudio.github.io/renv/articles/renv.html
+
+.libPaths()
+
+# list all packages in libraries on my machine
+lapply(.libPaths(), list.files)
+
+# which repositories are currently set up in your session
+getOption("repos")
+
+# will create a snapshot of all packages and their versions
+renv::snapshot()
+# if called later, it will restore all packages from the last snapshot
+# this way you can share a script and all packages will be the same
+renv::restore()
+```
+
 # 26.06.24
 
 Error messages in German in RStudio ... nice and useless :)
