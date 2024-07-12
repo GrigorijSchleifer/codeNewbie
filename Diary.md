@@ -1,5 +1,13 @@
+<a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
 
- <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
+## 12.07.24
+
+```R
+# This vignette summarises the various formats that grid drawing functions take. Most of this information is available scattered throughout the R documentation. This appendix brings it all together in one place.
+vignette("ggplot2-specs")
+````
+
+<a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
 
 ## 30.06.24
 
