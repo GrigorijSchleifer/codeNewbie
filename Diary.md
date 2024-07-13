@@ -1,6 +1,18 @@
 
 <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
 
+First encounter of the pipe operator behaving weirdly (something with left and right)
+
+```R
+major_processed |> 
+  select(Major, Total, ShareWomen, Sample_size, Median) %>%
+  lm(Median ~ ShareWomen, data = ., weights = Sample_size)
+```
+
+
+<a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
+
+
 ```R
 # facet_grid() forms a matrix of panels defined by row and column faceting variables. It is most useful when you have two discrete variables,
 ggplot(mpg, aes(x = displ, y = hwy)) + 

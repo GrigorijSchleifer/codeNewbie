@@ -1,3 +1,13 @@
+# ## 13.07.24
+
+First encounter of the pipe operator behaving weirdly (something with left and right)
+
+```R
+major_processed |> 
+  select(Major, Total, ShareWomen, Sample_size, Median) %>%
+  lm(Median ~ ShareWomen, data = ., weights = Sample_size)
+```
+
 ## 13.07.24
 
 <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
