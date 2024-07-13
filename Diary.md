@@ -1,3 +1,14 @@
+
+<a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
+
+```R
+# facet_grid() forms a matrix of panels defined by row and column faceting variables. It is most useful when you have two discrete variables,
+ggplot(mpg, aes(x = displ, y = hwy)) + 
+  geom_point() + 
+  facet_grid(drv ~ cyl)
+  ```
+
+
 <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
 
 ## 12.07.24
