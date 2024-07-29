@@ -1,5 +1,31 @@
-
 <a href="https://github.com/GrigorijSchleifer/codeNewbie/tree/main/R">R</a>
+
+Visualising exponential relationships
+
+```R
+# exponential relationship
+df_exp <- data.frame(
+    normal = c(1:100),
+    exp = exp(1:100)
+)
+
+# normal logs view
+df_exp %>% 
+    ggplot(aes(normal, exp)) +
+    geom_point()
+
+# y axis log10
+df_exp %>% 
+    ggplot(aes(normal, exp)) +
+    geom_point() +
+    scale_y_log10()
+```
+
+<img width="777" alt="image" src="https://github.com/GrigorijSchleifer/codeNewbie/assets/36699154/2d6fe441-b521-445c-928e-d4dfd3f815c5">
+
+<img width="777" alt="image" src="https://github.com/GrigorijSchleifer/codeNewbie/assets/36699154/2d6fe441-b521-445c-928e-d4dfd3f815c5">
+
+<a href="https://github.com/Grigorij`chleifer/codeNewbie/tree/main/R">R</a>
 
 First encounter of the pipe operator behaving weirdly (something with left and right)
 
