@@ -1,6 +1,15 @@
+# 04.08.2024
+
+```R
+# reversing the order of rows
+# row_number() should be used inside mutate, filter or some other dplyr verb (I forgot which one)
+# otherwise it returns numbers I don´t understand
+arrange(desc(row_number())) 
+```
+
 # 03.08.2024
 
-I am stuck again while trying to move a cloned repository that I found on the internet (a copy of a book coded in bookdown) to a repository I created on Github. First of all I deleted the remotes that came with the repository I cloned (didn`t know that remotes need to be deleted) and added new remotes "pointer" that where the url of my new repository. 
+I am stuck again while trying to move a cloned repository that I found on the internet (a copy of a book coded in bookdown) to a repository I created on Github. First of all I deleted the remotes that came with the cloned repository (didn`t know that remotes need to be deleted) and added new remote "pointer" that where the url of my new repository. 
 
 ```bash
 # shows the remotes
