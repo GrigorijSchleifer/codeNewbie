@@ -7,7 +7,7 @@
 arrange(desc(row_number())) 
 ```
 
-# 03.08.2024
+# 03.08.2024, 05.08.24
 
 I am stuck again while trying to move a cloned repository that I found on the internet (a copy of a book coded in bookdown) to a repository I created on Github. First of all I deleted the remotes that came with the cloned repository (didn`t know that remotes need to be deleted) and added new remote "pointer" that where the url of my new repository. 
 
@@ -15,7 +15,29 @@ I am stuck again while trying to move a cloned repository that I found on the in
 # shows the remotes
 git remote -v
 ```
-I created a new branch `brach_test` with the `git branch branch_test` command. And checked out into it with `git checkout brach_test`. I pushed the branch with `git push branch_test` but needed to set the remote as upstream, with `git push --set-upstream origin branch_test`. Not entirely sure why I needed to do this and not sure where I am going with this but who cares. Next, I will try to push the new branch to the main branch. Next, I will try to understand what the flag `--set-upstream` does.
+I created a new branch `brach_test` with the `git branch branch_test` command. And checked out into it with `git checkout brach_test`. I pushed the branch with `git push branch_test` but needed to set the remote as upstream, with `git push --set-upstream origin branch_test`. Not entirely sure why I needed to do this and not but ok let´s where this will go.
+
+UPDATE (05.08.24) 
+
+I don´t thing the steps above are helful. I decided to clone my own new (repository)[https://github.com/GrigorijSchleifer/Medizinische-Informatik] and edits its remotes with this command. 
+
+```bash
+# here I add additional remote to my local repository  
+git remote add book https://github.com/rstudio/bookdown-demo.git
+
+# now we see two remotes in my local repository I cloned on my Mac
+git remote -v
+
+# book	https://github.com/rstudio/bookdown-demo.git (fetch)
+# book	https://github.com/rstudio/bookdown-demo.git (push)
+# origin	https://github.com/GrigorijSchleifer/Medizinische-Informatik.git (fetch)
+# origin	https://github.com/GrigorijSchleifer/Medizinische-Informatik.git (push)
+
+
+
+```
+
+Next, I will try to push the new branch to the main branch. Next, I will try to understand what the flag `--set-upstream` does.
 
 # 29.07.2024
 `
