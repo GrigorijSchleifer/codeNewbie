@@ -9,6 +9,9 @@ arrange(desc(row_number()))
 
 # 03.08.24/05.08.24/06.08.24
 
+This (video)[https://www.youtube.com/watch?v=T13gDBXarj0&t=265s] is the best example of merging and pulling that I have seen so far. 
+
+
 I am stuck again while trying to move a cloned repository that I found on the internet (a copy of a book coded in bookdown) to a repository I created on Github. First of all I deleted the remotes that came with the cloned repository (didn`t know that remotes need to be deleted) and added new remote "pointer" that where the url of my new repository. 
 
 ```bash
@@ -34,7 +37,7 @@ git remote -v
 # origin	https://github.com/GrigorijSchleifer/Medizinische-Informatik.git (push)
 ```
 
-Next, I fetched the content from the bookdown-demo to my local repository
+Next, I fetched the content from the bookdown-demo to my local repository.
 
 ```bash
 # the pointer to the remote of the bookdown-demo is named book
