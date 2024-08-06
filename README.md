@@ -7,7 +7,7 @@
 arrange(desc(row_number())) 
 ```
 
-# 03.08.2024, 05.08.24
+# 03.08.24/05.08.24/06.08.24
 
 I am stuck again while trying to move a cloned repository that I found on the internet (a copy of a book coded in bookdown) to a repository I created on Github. First of all I deleted the remotes that came with the cloned repository (didn`t know that remotes need to be deleted) and added new remote "pointer" that where the url of my new repository. 
 
@@ -22,22 +22,49 @@ UPDATE (05.08.24)
 I don´t thing the steps above are helful. I decided to clone my own new (repository)[https://github.com/GrigorijSchleifer/Medizinische-Informatik] and edits its remotes with this command. 
 
 ```bash
-# here I add additional remote to my local repository  
+# here I add to my local repository an additional remote poiter and give it a short name `book`
 git remote add book https://github.com/rstudio/bookdown-demo.git
 
-# now we see two remotes in my local repository I cloned on my Mac
+# now we see two remotes in my local repository 
 git remote -v
 
 # book	https://github.com/rstudio/bookdown-demo.git (fetch)
 # book	https://github.com/rstudio/bookdown-demo.git (push)
 # origin	https://github.com/GrigorijSchleifer/Medizinische-Informatik.git (fetch)
 # origin	https://github.com/GrigorijSchleifer/Medizinische-Informatik.git (push)
-
-
-
 ```
 
-Next, I will try to push the new branch to the main branch. Next, I will try to understand what the flag `--set-upstream` does.
+Next, I fetched the content from the bookdown-demo to my local repository
+
+```bash
+# the pointer to the remote of the bookdown-demo is named book
+# this brings content, branches, commits from this repository to my local ropositors
+git fetch book
+```
+
+The next step that solved the headache was to merge the bookdown-demo on main. Or the other way around (main from my own repository on the tip of book/main). I am still confused what the correct order of `git merge` should be. And another important step was to allow the merge of unrelated histories. I think I know what the meaning of this flag is. Becaus my own, and freshly created repository is unrelated to the bookdown-demo repo, the histories are absolutely unrelated and git´s default behaviour is to prevent the merge of unrelated histories. The command I used is:
+
+```bash
+# because we have different conten in README there is a conflict
+git merge main book/main --allow-unrelated-histories
+
+# Auto-merging README.md
+# CONFLICT (add/add): Merge conflict in README.md
+# Recorded preimage for 'README.md'
+# Automatic merge failed; fix conflicts and then commit the result.
+```
+
+```bash
+# NOT CLEAR
+git commit -m "fatal: You have not concluded your merge (MERGE_HEAD exists)"
+# Recorded preimage for 'README.md'
+# [main 3af470e] fatal: You have not concluded your merge (MERGE_HEAD exists)
+
+# NOT CLEAR
+git merge main book --allow-unrelated-histories
+# merge: book - not something we can merge
+```
+
 
 # 29.07.2024
 `
