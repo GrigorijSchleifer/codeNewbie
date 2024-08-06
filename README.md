@@ -9,7 +9,7 @@ arrange(desc(row_number()))
 
 # 03.08.24/05.08.24/06.08.24
 
-This (video)[https://www.youtube.com/watch?v=T13gDBXarj0&t=265s] is the best example of merging and pulling that I have seen so far. 
+This [video](https://www.youtube.com/watch?v=T13gDBXarj0&t=265s) is the best example of merging and pulling that I have seen so far. 
 
 
 I am stuck again while trying to move a cloned repository that I found on the internet (a copy of a book coded in bookdown) to a repository I created on Github. First of all I deleted the remotes that came with the cloned repository (didn`t know that remotes need to be deleted) and added new remote "pointer" that where the url of my new repository. 
@@ -22,7 +22,7 @@ I created a new branch `brach_test` with the `git branch branch_test` command. A
 
 UPDATE (05.08.24) 
 
-I don´t thing the steps above are helful. I decided to clone my own new (repository)[https://github.com/GrigorijSchleifer/Medizinische-Informatik] and edits its remotes with this command. 
+I don´t thing the steps above are helful. I decided to clone my own new [repository](https://github.com/GrigorijSchleifer/Medizinische-Informatik) and edits its remotes with this command. 
 
 ```bash
 # here I add to my local repository an additional remote poiter and give it a short name `book`
