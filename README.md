@@ -1,4 +1,23 @@
-# 04.08.2024
+# 07.08.2024
+
+Converting a random year to a corresponding decade
+
+```R
+yrs <- tribble(~year, 
+        1234, 
+        1345, 
+        1235,
+        1344,
+        1899)
+
+# first we divide the year by 10 and floor it
+# this way we get rid of the year and keep the integer of the decade
+# by multiplying by 10 we get the decade
+yrs_decade <- yrs %>%
+    mutate(decade = 10 * floor(year/10))
+```
+
+# 04.08.202`
 
 ```R
 # reversing the order of rows
@@ -10,7 +29,6 @@ arrange(desc(row_number()))
 # 03.08.24/05.08.24/06.08.24
 
 This [video](https://www.youtube.com/watch?v=T13gDBXarj0&t=265s) is the best example of merging and pulling that I have seen so far. 
-
 
 I am stuck again while trying to move a cloned repository that I found on the internet (a copy of a book coded in bookdown) to a repository I created on Github. First of all I deleted the remotes that came with the cloned repository (didn`t know that remotes need to be deleted) and added new remote "pointer" that where the url of my new repository. 
 
