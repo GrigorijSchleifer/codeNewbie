@@ -1,3 +1,29 @@
+One lm smooth line for all genres vs. separate lm line for every group
+
+```R
+# one line
+movie_profit %>% 
+    filter(release_date >= "1990-01-01",
+           profit_ratio >= .01) %>% 
+    ggplot(aes(release_date, profit_ratio)) +
+    geom_point(aes(color = genre)) +
+    geom_smooth(method = "lm", group = 1) +
+    geom_text(aes(label = movie), vjust = 1, hjust = 1, check_overlap = TRUE) +
+    scale_y_log10(labels = function(x) paste0(x, "X"), breaks = c(.1, 1, 10, 100))
+
+# many lines
+movie_profit %>% 
+    filter(release_date >= "1990-01-01",
+           profit_ratio >= .01) %>% 
+    ggplot(aes(release_date, profit_ratio)) +
+    geom_point(aes(color = genre)) +
+    geom_smooth(method = "lm") +
+    geom_text(aes(label = movie), vjust = 1, hjust = 1, check_overlap = TRUE) +
+    scale_y_log10(labels = function(x) paste0(x, "X"), breaks = c(.1, 1, 10, 100))
+```
+
+
+
 # 07.08.2024
 
 Converting a random year to a corresponding decade
