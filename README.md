@@ -1,3 +1,26 @@
+
+# 18.08.24
+
+Another [TidyTuesday](https://www.youtube.com/watch?v=nms9F-XubJU&list=PL19ev-r1GBwkuyiwnxoHTRC8TTqP8OEi8&index=79) pearl (minute 9:00)
+
+```R
+# this is a biggy!
+# cool way to display weekdays
+# not sure what group argument does but without it doesnt work
+# AAAAAND mutate things inside group_by method is really cool
+r_downloads_year %>% 
+    count(date) %>% 
+    # there will be a lot data for every weekday
+    group_by(weekday = wday(date, label = TRUE)) %>% 
+    mutate(average = mean(n)) %>% 
+    ggplot(aes(weekday, average)) +
+    geom_line(group = 1) +
+    expand_limits(y = 0)
+```
+
+
+# 17.08.2024
+
 One lm smooth line for all genres vs. separate lm line for every group
 
 ```R
