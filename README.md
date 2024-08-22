@@ -1,4 +1,21 @@
 
+# 22.08.24
+
+Displaying time on the x axis [TidyTuesday](https://www.youtube.com/watch?v=nms9F-XubJU&list=PL19ev-r1GBwkuyiwnxoHTRC8TTqP8OEi8&index=79) (minute 40:00)
+
+```R
+r_downloads_gaps %>% 
+    count(country, gap) %>% 
+    # filter(country == "United States") %>% 
+    ggplot(aes(gap)) +
+    geom_histogram() +
+    # clear bimodal log normal distribution
+    # scale_x_log10()
+    scale_x_log10(breaks = 60 ^ (0:4),
+                  labels = c("Second", "Minute", "Hour", "2.5 Days", "120 Days"))
+```
+
+
 # 18.08.24
 
 Another [TidyTuesday](https://www.youtube.com/watch?v=nms9F-XubJU&list=PL19ev-r1GBwkuyiwnxoHTRC8TTqP8OEi8&index=79) pearl (minute 9:00)
