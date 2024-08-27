@@ -1,9 +1,20 @@
 
+# 27.08.24
+
+Not useful but interesting. How many times a package was downloaded from CRAN in the last week
+
+```R
+cranlogs::cran_downloads(packages = "tidyverse", when = "last-week")
+```
+
 # 22.08.24
 
 Displaying time on the x axis [TidyTuesday](https://www.youtube.com/watch?v=nms9F-XubJU&list=PL19ev-r1GBwkuyiwnxoHTRC8TTqP8OEi8&index=79) (minute 40:00)
 
 ```R
+# gap was produced by the line
+# mutate(gap = datetime - lag(datetime))
+# lag in seconds between downloads
 r_downloads_gaps %>% 
     count(country, gap) %>% 
     # filter(country == "United States") %>% 
