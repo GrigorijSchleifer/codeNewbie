@@ -1,3 +1,21 @@
+# 29.08.2024
+
+To the color aesthetic and see the 6 lumped categories we need some R magic. Without arranging the data, the Other category would be on top and will overlay the other categories in the plot.
+
+```R
+us_wind %>% 
+    filter(!t_state %in% c("AK", "HI", "GU", "PR")) %>% 
+    # FALSE comes before TRUE (in this case Other is on top)
+    # fct_lumped data needs to be arranged so that TRUE comes on the top of the table
+    mutate(p_name = fct_lump(p_name, 6)) %>% 
+    arrange(p_name != "Other") %>% 
+    filter(xlong < 100) %>% 
+    ggplot(aes(xlong, ylat, color = p_name)) +
+    borders("state") +
+    geom_point() + 
+    coord_map() +
+    theme_void()
+```
 
 # 27.08.24
 
