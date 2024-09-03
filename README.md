@@ -1,3 +1,14 @@
+
+# 03.09.2024
+
+Change all numeric values in a dataframe to NA if they are equal to -9999
+
+```R
+us_wind <- us_wind %>% 
+    filter(!t_state %in% c("AK", "HI", "GU", "PR")) %>% 
+    mutate_if(is.numeric, ~ ifelse(. == -9999, NA, .))
+```
+
 # 29.08.2024
 
 To the color aesthetic and see the 6 lumped categories we need some R magic. Without arranging the data, the Other category would be on top and will overlay the other categories in the plot.
