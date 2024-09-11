@@ -1,11 +1,26 @@
 
+# 11.09.2024
+
+```R
+kenya_pr %>% 
+    # niiiice! This will show the highest pr´s on top of the graph
+    # this will arrange from lowest to highest and plot highest last
+    arrange(pr) %>% 
+    ggplot(aes(longitude, latitude, colour = pr)) +
+    geom_point() +
+    borders("world", regions = "Kenya") +
+    scale_color_gradient2(low = "blue", 
+                          high = "red", 
+                          midpoint = .5,
+                          labels = percent_format())
+```
+
 # 03.09.2024
 
 Change all numeric values in a dataframe to NA if they are equal to -9999
 
 ```R
 us_wind <- us_wind %>% 
-    filter(!t_state %in% c("AK", "HI", "GU", "PR")) %>% 
     mutate_if(is.numeric, ~ ifelse(. == -9999, NA, .))
 ```
 
