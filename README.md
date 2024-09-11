@@ -2,7 +2,10 @@
 # 11.09.2024
 
 ```R
+# ggplot2::map_data("world") %>% tibble() %>% filter(region == "Kenya")
 kenya_pr %>% 
+    # %/% truncates the last digit  
+    mutate(decade = 10 * (year_start %/% 10)) %>% 
     # niiiice! This will show the highest pr´s on top of the graph
     # this will arrange from lowest to highest and plot highest last
     arrange(pr) %>% 
@@ -12,7 +15,12 @@ kenya_pr %>%
     scale_color_gradient2(low = "blue", 
                           high = "red", 
                           midpoint = .5,
-                          labels = percent_format())
+                          labels = percent_format()) +
+    facet_wrap(~ decade) +
+    theme_void() +
+    coord_map() +
+    # changes the name of the legend
+    labs(color = "Prevalence")
 ```
 
 # 03.09.2024
