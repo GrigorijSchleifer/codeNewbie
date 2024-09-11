@@ -2,6 +2,11 @@
 # 11.09.2024
 
 ```R
+malaria_in_process %>% 
+    # grabbing 6 unique countries
+    filter(country %in% sample(unique(country), 6))
+
+
 # ggplot2::map_data("world") %>% tibble() %>% filter(region == "Kenya")
 kenya_pr %>% 
     # %/% truncates the last digit  
