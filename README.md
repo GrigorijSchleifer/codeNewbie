@@ -1,4 +1,14 @@
 
+# 26.09.23
+
+### Get the decade of a year
+
+```R
+kenya_pr %>% 
+    # %/% truncates the last digit  
+    mutate(decade = 10 * (year_start %/% 10))
+```
+
 # 11.09.2024
 
 ```R
