@@ -1,3 +1,13 @@
+# 13.10.24
+
+```R
+# remove only a specified file
+for (fl in list.files(getwd(), recursive = TRUE)) {
+    if (grepl(pattern = ".icloud", x = fl) == TRUE) {
+      file.remove(fl)
+    } 
+}
+```
 
 # 26.09.23
 
