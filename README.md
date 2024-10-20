@@ -1,4 +1,9 @@
+# 20.10.24
 
+```R
+# not sure what this is but some geography sugar 
+tibble::as.tibble(map_data("world"))
+```
 
 # 13.10.24
 
