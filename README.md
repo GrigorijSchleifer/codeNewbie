@@ -1,4 +1,19 @@
+
+# 21.10.24
+
+```R
+# dispay the datasets contained in a package
+data(package = "datasets")
+```
+
 # 20.10.24
+
+```R
+# selecting inside a join and keep only columns that are needed
+malaria_spread %>% 
+    inner_join(maps::iso3166 %>% 
+                   select(a3, mapname), by = c(code = "a3"))
+```
 
 ```R
 # not sure what this is but some geography sugar 
