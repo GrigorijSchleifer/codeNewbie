@@ -1,10 +1,26 @@
+# 22.10.24
 
-# 21.10.24
+```R
+# THE WORLD
+malaria_spread %>% 
+    inner_join(maps::iso3166 %>% 
+                   # do we keep only mapname here
+                   select(a3, mapname), by = c(code = "a3")) %>% 
+    # this will keep all regions
+    # keeps all observations in y
+    right_join(world, by = c(mapname = "region")) %>% 
+    ggplot(aes(long, lat, group = group, fill = Y2015)) +
+    geom_polygon() +
+    ltheme_void()
+```11
+
+
+
 
 ```R
 # dispay the datasets contained in a package
-data(package = "datasets")
 ```
+data(package = "datasets")
 
 # 20.10.24
 
