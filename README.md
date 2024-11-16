@@ -1,3 +1,11 @@
+# 16.11.24
+
+```R
+# filter only years like 1980, 1990 ...
+filter(year %% 10 == 0) 
+```
+
+
 # 22.10.24
 
 ```R
@@ -12,9 +20,7 @@ malaria_spread %>%
     ggplot(aes(long, lat, group = group, fill = Y2015)) +
     geom_polygon() +
     ltheme_void()
-```11
-
-
+```
 
 
 ```R
