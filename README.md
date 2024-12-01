@@ -1,3 +1,11 @@
+# 10.12.24
+
+```R
+# filter every second year
+filter(year %% 2 == 0) 
+```
+
+
 # 16.11.24
 
 ```R
