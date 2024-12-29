@@ -1,3 +1,13 @@
+
+# 29.12.24
+
+```R
+# removes any number inside "name"
+df %>%
+   mutate(name = str_remove(name, "\\d+"))
+```
+
+
 # 10.12.24
 
 ```R
