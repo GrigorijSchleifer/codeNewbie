@@ -1,3 +1,11 @@
+# 01.01.25
+
+```R
+# removes value entries that are in c()
+df %>%
+  filter(!value %in% c("None", "Other (please specify)"))
+```
+
 
 # 29.12.24
 
