@@ -1,3 +1,18 @@
+
+```R
+# showing correlation inside a column
+# id: persons id
+# value: here type of food
+# what food types are correlated with other food types
+
+
+library(widyr)
+
+food_gathered %>% 
+    pairwise_cor(value, id, sort = TRUE)
+```
+
+
 # 01.01.25
 
 ```R
