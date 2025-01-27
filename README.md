@@ -1,3 +1,9 @@
+# 27.01.25
+```R
+# you can mutate things inside count
+baltimore_bridges %>% 
+    count(decade = 10 * (yr_built %/% 10))
+```
 
 ```R
 # showing correlation inside a column
