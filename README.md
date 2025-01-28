@@ -1,3 +1,11 @@
+# 28.01.25
+```R
+# replacing NA with something else
+maryland_bridges %>% 
+    replace_na(list(responsibility = "Other"))
+```
+
+
 # 27.01.25
 ```R
 # you can mutate things inside count
