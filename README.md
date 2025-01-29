@@ -1,8 +1,18 @@
+# 29.01.25
+```R
+# nice way to chqnge color aesthetic and do it for a log normal distributed data
+ scale_color_gradient2(low = "blue",
+                          high = "red",
+                          midpoint = log10(median(maryland_bridges$avg_daily_traffic)),
+                          trans = "log10",
+                          labels = comma_format()) +
+```
+
 # 28.01.25
 ```R
 # replacing NA with something else
 maryland_bridges %>% 
-    replace_na(list(responsibility = "Other"))
+    replace_na(list(responsibility = "Other")u)
 ```
 
 
