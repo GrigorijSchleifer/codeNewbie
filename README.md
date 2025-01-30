@@ -1,3 +1,10 @@
+# 30.01.25
+
+```R
+# showing coefficients and stuff of a model in a nice way
+model %>% tidy()
+```
+
 # 29.01.25
 ```R
 # nice way to chqnge color aesthetic and do it for a log normal distributed data
