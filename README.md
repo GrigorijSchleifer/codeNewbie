@@ -1,3 +1,10 @@
+# 11.02.26
+```R
+# first the new then the old (multiple possible)
+mtcars %>%
+    rename(newname = oldname, newname = oldname)
+```
+
 # 30.01.25
 
 ```R
