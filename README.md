@@ -1,3 +1,12 @@
+# 17.02.26
+```bash
+# R versions on Mac OS
+# https://support.posit.co/hc/en-us/articles/200486138-Changing-R-versions-for-the-RStudio-Desktop-IDE
+ls -l /Library/Frameworks/R.framework/Versions/
+
+```
+
+
 # 11.02.26
 ```R
 # first the new then the old (multiple possible)
