@@ -1,6 +1,54 @@
 # code-medic — Blog
 
 
+## 2026-09-15 — grip verliert die Datei nach `mv`/Verschieben (404 Not Found)
+
+**Symptom:** Blog-Datei nach `~/github/codeNewbie` verschoben. Server auf
+Port 8003 lief weiter, zeigte aber `404 Not Found` im Browser.
+
+**Ursache:** `grip <Datei> <Port>` merkt sich beim Start nur den **Pfad**
+zur Datei, nicht deren Inhalt. Wird die Datei danach verschoben oder
+umbenannt (z. B. mit `mv` oder im Finder), existiert unter dem alten Pfad
+nichts mehr — der Server kann die Datei nicht mehr finden und liefert 404,
+obwohl der Prozess selbst noch normal läuft. Bestätigt mit `ls` (alter Pfad:
+"No such file or directory") und `curl` (Server antwortet, aber mit 404).
+
+**Lösung — alten Prozess beenden und am neuen Ort neu starten:**
+```bash
+# 1. Laufenden Prozess finden (Spalte 2 = Process-ID/PID)
+ps aux | grep grip
+
+# 2. Alten Prozess mit seiner PID beenden
+kill 17545
+
+# 3. Kurz warten, bis der Port wirklich wieder frei ist,
+#    bevor ein neuer Prozess denselben Port belegt
+sleep 1
+
+# 4. pipx installiert Programme nach ~/.local/bin — dieser Ordner ist nicht
+#    automatisch im PATH, ohne diesen Schritt meldet die Shell
+#    "grip: command not found"
+export PATH="$PATH:$HOME/.local/bin"
+
+# 5. In den Ordner wechseln, in dem die Datei jetzt tatsächlich liegt
+cd ~/github/codeNewbie
+
+# 6. grip neu starten: <Dateiname> <Port> — jetzt mit korrektem, aktuellem Pfad
+grip code-medic-blog.md 8003
+
+# 7. Prüfen, ob es klappt (in einem zweiten Terminal, da grip blockiert):
+#    -o /dev/null verwirft die Antwort, -w gibt nur den HTTP-Statuscode aus
+#    (200 = erfolgreich, 404 = nicht gefunden)
+curl -s -o /dev/null -w "%{http_code}\n" http://127.0.0.1:8003
+```
+
+**Merksatz:** Läuft eine Datei über einen lokalen Server (egal ob `grip`,
+`python3 -m http.server` o. ä.) und wird die Datei währenddessen verschoben
+oder umbenannt — Server killen und am neuen Pfad neu starten. Der Prozess
+merkt eine Verschiebung nicht von selbst.
+
+---
+
 ## 2026-09-15 — Laborbuch im Browser ansehen mit `grip`
 
 **Ziel:** Eine `.md`-Datei (z. B. ein Laborbuch) im Browser lesbar (mit Formatierung) über `http://127.0.0.1:PORT`.
