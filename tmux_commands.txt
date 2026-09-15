@@ -1,0 +1,56 @@
+TEST SYMLINK
+
+https://www.reddit.com/r/tmux/comments/1r8u5i6/an_easy_hhelp_flag_that_you_know_actually_helps/
+ 
+tmux attach -t <session name>                    # log into session
+tmux list-sessions                               # list running sessions
+tmux new -s <NAME>                               # creates a new session
+
+
+--------
+ctrl a                                           # needed for all command to follow
+
+
+Shift tab                                        # allow all edits
+
+
+Ctrl a -> control ,                              # rename panel   
+Ctrl a -> shift $                                # rename session
+
+COOL
+
+Ctrl a -> shift .                                # cool menu for handling panes  
+
+
+
+
+ctrl a -> shift %                                # vertical split
+ctrl a -> shift "                                # horizontal split
+Ctrl a -> d                                      # close pane but not kill session
+Ctrl a -> c                                      # creates new tab
+ctrl a -> x                                      # close that pane (with confirmation)
+ctrl a -> :kill-pane                             # close pane without confirmation
+ctrl a -> :kill-session                          # closes all panes without confirmation
+
+
+* `ctrl b` + `shift %` splitting panes left and right
+* `ctrl b` + `shift "` splitting panes top and down 
+* `ctrl b` + `arrow keys` navigating between panes down
+* `ctrl d` close a pane or type `exit`
+
+
+* `tmux ls` List the currently running sessions
+* `tmux attach -t <sessionNumber>` attacht to a specific session number (presented by `tmux ls`¡¡¡)
+* `tmux new -s <sessionName>` attacht to a specific session  
+* `tmux rename-session -t 0 <sessionName>` rename a session using its number
+
+
+
+HERMES
+
+hermes model                                     # im aktivierten root@srv1882627:/docker/hermes-agent-5ta0
+root@a21dcb5afa8c:/#                             # Container ID (docker ps -q)
+docker compose exec -it hermes-agent /bin/bash   # im root@srv1882627:/docker/hermes-agent-5ta0$
+
+Option + hoch/runter                             # Zeigt alles aus dem Terminal
+
