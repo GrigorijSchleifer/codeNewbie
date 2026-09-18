@@ -1,6 +1,75 @@
 # code-medic — Blog
 
 
+## 2026-09-15 — `find` mit `-maxdepth` gezielt einen Ordner suchen
+
+**Ziel:** Einen Projektordner (z. B. `eScribe`) im Home-Verzeichnis finden,
+ohne dass `find` ewig durch jeden Unterordner (inkl. `node_modules` etc.)
+gräbt.
+
+**Befehl:**
+```bash
+find ~ -maxdepth 3 -iname "*escribe*" 2>/dev/null
+```
+
+**Aufschlüsselung:**
+- **`find ~`** — durchsucht rekursiv ab dem Home-Verzeichnis (`~`).
+- **`-maxdepth 3`** — begrenzt die Suche auf max. 3 Ordner-Ebenen tief
+  (Home = Ebene 0). Ohne das gräbt `find` durch *jeden* Unterordner
+  überall — dauert lange und listet viel Unnötiges. `3` reicht meist, um
+  Top-Level-Projektordner zu finden.
+- **`-iname "*escribe*"`** — sucht Datei-/Ordnernamen, die `escribe`
+  enthalten, case-**i**nsensitive (findet `eScribe`, `Escribe`,
+  `ESCRIBE` etc.). Die Anführungszeichen verhindern, dass die Shell den
+  `*` (Wildcard) selbst expandiert, bevor `find` ihn sieht — `find` soll
+  das Muster selbst gegen jeden Dateinamen matchen, nicht die Shell vorab
+  gegen Dateien im aktuellen Ordner.
+- **`2>/dev/null`** — leitet Fehlermeldungen (stderr, z. B. "Permission
+  denied" bei gesperrten Systemordnern) ins Nichts um, damit nur Treffer
+  angezeigt werden.
+
+**Merksatz:** `-maxdepth N` ist der Hebel gegen ausufernde `find`-Suchen
+im Home-Verzeichnis — ohne ihn wird's langsam und die Trefferliste
+unübersichtlich.
+
+---
+
+## 2026-09-15 — Claude Code: Session-ID finden & `claude resume` verstehen
+
+**Ziel:** Nach dem Mac-Crash herausfinden, welche Claude-Code-Session
+gerade läuft, und verstehen, was `claude resume` genau wiederherstellt.
+
+**Session-ID anzeigen:**
+```bash
+# Innerhalb einer laufenden Claude-Code-Session: zeigt u. a. die
+# aktuelle Session-ID an
+/status
+
+# Im Terminal, außerhalb: listet alle vorhandenen Sessions mit
+# ID und Zeitstempel der letzten Nachricht zur Auswahl auf
+claude --resume
+```
+
+**Was `claude resume` wiederherstellt und was nicht:**
+- Der komplette Gesprächsverlauf (Transkript) der gewählten Session wird
+  weitergeladen — Claude "erinnert" sich an alles, was vorher besprochen
+  wurde.
+- Das **Primary working directory** (der Arbeitsordner, in dem Claude
+  Datei-/Shell-Befehle ausführt) wird dabei **nicht** aus der alten Session
+  übernommen. Es wird beim Start neu gesetzt — und zwar auf den Ordner,
+  in dem man `claude resume` gerade im Terminal ausführt.
+- Sprich: Führt man `claude resume` in einem anderen Ordner aus als beim
+  letzten Mal, "wandert" die Session dorthin, auch wenn der Gesprächsinhalt
+  noch auf den alten Ordner Bezug nimmt.
+
+**Merksatz:** `claude resume` = alter Gesprächsinhalt + neuer,
+aktueller Arbeitsordner (der vom Terminal beim Start). Um sicherzugehen,
+welche Session man wiederaufnimmt, `claude --resume` (ohne Session bereits
+gewählt) nutzen — zeigt Liste mit Zeitstempeln zum Abgleich mit dem
+tatsächlichen letzten Nutzungszeitpunkt vor dem Crash.
+
+---
+
 ## 2026-09-15 — grip verliert die Datei nach `mv`/Verschieben (404 Not Found)
 
 **Symptom:** Blog-Datei nach `~/github/codeNewbie` verschoben. Server auf
