@@ -4,7 +4,7 @@ Zwischen tmux-Panes mit `Alt-h/j/k/l` springen statt `Ctrl-A` + Pfeiltaste
 
 ```bash
 # 1. Datei oeffnen
-nano ~/.tmux.conf
+vim ~/.tmux.conf
 
 # 2. einfuegen (-n = kein Ctrl-A noetig, M- = Alt/Option)
 bind -n M-h select-pane -L
@@ -12,17 +12,13 @@ bind -n M-j select-pane -D
 bind -n M-k select-pane -U
 bind -n M-l select-pane -R
 
-# 3. speichern: Ctrl-O, Enter, Ctrl-X
+# 3. speichern: :wq > Enter
 
 # 4. in laufende Session laden
 tmux source-file ~/.tmux.conf
 
 # 5. testen: Alt-j / Alt-k
 # kommen Sonderzeichen (∆ º) statt Sprung -> Terminal schickt kein Meta:
-echo $TERM_PROGRAM
-# iTerm2:   Settings > Profiles > Keys > Left Option Key = Esc+
-# Terminal: Einstellungen > Profile > Tastatur > "Option als Meta-Taste"
-# VS Code:  "terminal.integrated.macOptionIsMeta": true
 ```
 
 
