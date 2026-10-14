@@ -1,6 +1,6 @@
 # 14.10.26
 
-Zwischen tmux-Panes mit `Alt-h/j/k/l` springen statt `Ctrl-A` + Pfeiltaste — eine Taste statt drei, Finger bleiben auf der Grundstellung.
+Zwischen tmux-Panes mit `Alt-h/j/k/l` springen statt `Ctrl-A` + Pfeiltaste 
 
 ```bash
 # 1. Datei oeffnen
