@@ -1,3 +1,29 @@
+# 14.10.26
+```bash
+# tmux: Panes mit vim-Tasten wechseln, ohne Prefix
+# 1. Datei oeffnen
+nano ~/.tmux.conf
+
+# 2. einfuegen (-n = kein Ctrl-A noetig, M- = Alt/Option)
+bind -n M-h select-pane -L
+bind -n M-j select-pane -D
+bind -n M-k select-pane -U
+bind -n M-l select-pane -R
+
+# 3. speichern: Ctrl-O, Enter, Ctrl-X
+
+# 4. in laufende Session laden
+tmux source-file ~/.tmux.conf
+
+# 5. testen: Alt-j / Alt-k
+# kommen Sonderzeichen (∆ º) statt Sprung -> Terminal schickt kein Meta:
+echo $TERM_PROGRAM
+# iTerm2:   Settings > Profiles > Keys > Left Option Key = Esc+
+# Terminal: Einstellungen > Profile > Tastatur > "Option als Meta-Taste"
+# VS Code:  "terminal.integrated.macOptionIsMeta": true
+```
+
+
 # 17.02.26
 ```bash
 # R versions on Mac OS
