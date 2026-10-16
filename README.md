@@ -22,6 +22,29 @@ vim: aktuelle Zeile in die Mac-Zwischenablage kopieren (danach mit `Cmd-V` ueber
 " kopiert immer ganze Zeilen
 ```
 
+Claude Code: `/clear` und das Kontextfenster
+
+```text
+Kontextfenster = alles, was Claude bei JEDER Antwort "vor Augen" hat:
+                 CLAUDE.md + gesamter bisheriger Chatverlauf + Tool-Ausgaben (Dateien, Befehle)
+
+Problem bei langen Sessions:
+  - jede Nachricht schickt den kompletten Verlauf mit -> langsamer, teurer
+  - fruehe Details geraten aus dem Blick, alte Themen "stoeren" neue -> Antwortqualitaet sinkt
+  - wird es zu voll, fasst Claude Code automatisch zusammen (auto-compact) -> Feinheiten gehen verloren
+
+/clear      Verlauf leeren, CLAUDE.md wird neu geladen = frische Session, ohne Claude zu beenden
+/compact    Verlauf selbst zusammenfassen lassen, Session laeuft weiter (wenn man mitten drin ist)
+/context    zeigt, wie voll das Kontextfenster gerade ist
+exit        Claude beenden; Session bleibt gespeichert -> claude --resume (oder /resume) holt sie zurueck
+
+Faustregel:
+  - Aufgabe/Lernblock fertig oder Themenwechsel  -> /clear
+  - mitten in einer Aufgabe, aber schon sehr lang -> /compact
+  - alles Wichtige (Regeln, Stand, To-dos) vorher in die CLAUDE.md schreiben lassen,
+    dann geht durch /clear nichts verloren
+```
+
 
 # 14.10.26
 
