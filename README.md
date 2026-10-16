@@ -1,3 +1,28 @@
+# 16.10.26
+
+vim: aktuelle Zeile in die Mac-Zwischenablage kopieren (danach mit `Cmd-V` ueberall einfuegen)
+
+```vim
+" aktuelle Zeile kopieren
+:.w !pbcopy
+
+" .        = Bereich "aktuelle Zeile" (steht VOR dem w: erst welche Zeilen, dann was tun)
+" w        = write, aber nicht in eine Datei ...
+" !pbcopy  = ... sondern per Pipe an pbcopy (macOS: Eingabe -> Zwischenablage)
+" Datei wird dabei NICHT gespeichert
+
+" Varianten
+:w !pbcopy          " ganze Datei
+:5,10w !pbcopy      " Zeilen 5-10
+" V (Zeilen markieren) > : > vim ergaenzt :'<,'> > w !pbcopy   -> markierte Zeilen
+
+" ACHTUNG
+" Leerzeichen vor ! ist Pflicht: :w!pbcopy = force write in eine DATEI namens pbcopy
+" :w. statt :.w -> schreibt in eine Datei namens "." (Fehler)
+" kopiert immer ganze Zeilen
+```
+
+
 # 14.10.26
 
 Zwischen tmux-Panes mit `Alt-h/j/k/l` springen statt `Ctrl-A` + Pfeiltaste 
@@ -7,10 +32,10 @@ Zwischen tmux-Panes mit `Alt-h/j/k/l` springen statt `Ctrl-A` + Pfeiltaste
 vim ~/.tmux.conf
 
 # 2. einfuegen (-n = kein Ctrl-A noetig, M- = Alt/Option)
-bind -n M-h select-pane -L
-bind -n M-j select-pane -D
-bind -n M-k select-pane -U
-bind -n M-l select-pane -R
+bind -n C-h select-pane -L
+bind -n C-j select-pane -D
+bind -n C-k select-pane -U
+bind -n C-l select-pane -R
 
 # 3. speichern: :wq > Enter
 

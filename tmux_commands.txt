@@ -48,9 +48,9 @@ ctrl a -> :kill-session                          # closes all panes without conf
 
 HERMES
 
-hermes model                                     # im aktivierten root@srv1882627:/docker/hermes-agent-5ta0
+hermes model                                     # im aktivierten root@<server>:/docker/<hermes-ordner>)
 root@a21dcb5afa8c:/#                             # Container ID (docker ps -q)
-docker compose exec -it hermes-agent /bin/bash   # im root@srv1882627:/docker/hermes-agent-5ta0$
+docker compose exec -it hermes-agent /bin/bash   # im root@<server>:/docker/<hermes-ordner>)
 
 Option + hoch/runter                             # Zeigt alles aus dem Terminal
 
