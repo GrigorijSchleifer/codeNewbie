@@ -2,6 +2,44 @@
 
 <!-- Format neuer Einträge: "## 💊 JJJJ-MM-TT — Thema", neuester oben, Abschluss mit "---" -->
 
+## 💊 2026-10-20 — Zurückspringen mit `cd -`
+
+| Eingabe | Wirkung |
+|---|---|
+| `cd -` | zurück ins vorherige Verzeichnis (und gibt den Pfad aus) |
+| `cd -` nochmal | wieder hin — pendelt zwischen den beiden letzten Ordnern |
+| `cd` (ohne Argument) / `cd ~` | ins Home-Verzeichnis |
+| `cd ..` | eine Ebene nach oben |
+
+- Woher weiß die Shell das? Sie merkt sich den letzten Ordner in der Variable `$OLDPWD`
+  (`echo $OLDPWD`). `cd -` ist eine Abkürzung für `cd "$OLDPWD"`.
+- Mehr als einen Schritt zurück (zsh): `cd -2`, `cd -3` … — Liste ansehen mit `dirs -v`.
+  Damit zsh sich bei jedem `cd` den Weg merkt: `setopt AUTO_PUSHD` in `~/.zshrc`.
+- Ähnlich in Git: `git switch -` wechselt zurück zum vorherigen Branch.
+
+---
+
+## 💊 2026-10-19 — Text suchen in Vim
+
+Voraussetzung: **Normalmodus** (ggf. `Esc` drücken).
+
+| Eingabe | Wirkung |
+|---|---|
+| `/Wort` + `Enter` | vorwärts suchen |
+| `?Wort` + `Enter` | rückwärts suchen |
+| `n` / `N` | nächster / vorheriger Treffer |
+| `*` / `#` | Wort unter dem Cursor vorwärts / rückwärts suchen |
+| `/\cwort` | Groß-/Kleinschreibung ignorieren (nur diese Suche) |
+| `:set ignorecase smartcase` | dauerhaft: klein getippt = egal, mit Großbuchstaben = exakt |
+| `:set hlsearch` / `:noh` | Treffer markieren / Markierung ausschalten |
+| `:set incsearch` | springt schon beim Tippen zum Treffer |
+| `:%s/alt/neu/gc` | ersetzen in der ganzen Datei (`%`), alle pro Zeile (`g`), jeweils nachfragen (`c`) |
+
+- Das Suchmuster ist ein **Regex**: `.` = beliebiges Zeichen, `^` = Zeilenanfang, `$` = Zeilenende. Ein wörtlicher Punkt also als `\.`.
+- Nur ganze Wörter: `/\<Wort\>` (`\<` `\>` = Wortgrenzen).
+
+---
+
 ## 💊 2026-10-11 — bookdown: langsames Rendern, abgeschnittenes Menü, kaputte Listen
 
 **1. Rendern dauerte ~30 min → `~/.Rprofile` lud tidyverse bei jedem R-Start**

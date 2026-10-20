@@ -7,7 +7,7 @@ Mein Lern-Logbuch: Terminal, Git, Vim, tmux, R, SQL, Emacs … — neueste Eintr
 
 | Jahr | Jan | Feb | Mär | Apr | Mai | Jun | Jul | Aug | Sep | Okt | Nov | Dez |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **2026** |  | [2](#februar-2026) |  |  |  |  |  |  |  | [2](#oktober-2026) |  |  |
+| **2026** |  | [2](#februar-2026) |  |  |  |  |  |  |  | [3](#oktober-2026) |  |  |
 | **2025** | [5](#januar-2025) |  |  |  |  |  |  |  |  |  |  |  |
 | **2024** |  | [4](#februar-2024) | [8](#märz-2024) | [2](#april-2024) | [3](#mai-2024) | [3](#juni-2024) | [3](#juli-2024) | [8](#august-2024) | [3](#september-2024) | [3](#oktober-2024) | [1](#november-2024) | [2](#dezember-2024) |
 | **2023** |  | [14](#februar-2023) |  |  |  |  |  |  | [1](#september-2023) | [5](#oktober-2023) |  |  |
@@ -18,7 +18,63 @@ Mein Lern-Logbuch: Terminal, Git, Vim, tmux, R, SQL, Emacs … — neueste Eintr
 
 ## Oktober 2026
 
+### 20.10.2026
+
+`cd -`: zurueck in den Ordner, aus dem man gekommen ist
+
+```bash
+cd -
+# springt ins vorherige Verzeichnis und gibt dessen Pfad aus
+# nochmal cd -  -> wieder hin = pendeln zwischen den letzten zwei Ordnern
+
+# Woher weiss die Shell das?
+echo $OLDPWD      # Variable mit dem letzten Ordner; cd - = cd "$OLDPWD"
+
+# Verwandte
+cd                # (ohne Argument) = cd ~ -> Home-Verzeichnis
+cd ..             # eine Ebene nach oben
+git switch -      # gleiches Prinzip in Git: zurueck zum vorherigen Branch
+
+# Mehr als einen Schritt zurueck (zsh)
+setopt AUTO_PUSHD # in ~/.zshrc: zsh merkt sich jeden cd-Schritt
+dirs -v           # Liste: 0 = hier, 1 = davor, 2 = davor ...
+cd -2             # zwei Schritte zurueck
+```
+
 ### 16.10.2026
+
+grep: alle Markdown-Ueberschriften einer Ebene auflisten (= Inhaltsverzeichnis einer `.Rmd`/`.md`)
+
+```bash
+grep '^## ' 09-*.Rmd 10-*.Rmd
+# = "Zeig mir aus beiden Dateien alle Zeilen, die mit '## ' beginnen"
+#   -> die Kapitelueberschriften (im MedInfo-Buch: die Curriculum-Punkte)
+
+# grep        Zeile fuer Zeile lesen, nur passende Zeilen ausgeben
+# '...'       einfache Anfuehrungszeichen = Shell, Finger weg: Muster kommt 1:1 bei grep an
+#             (ohne: # am Wortanfang = Kommentar -> Rest ignoriert; Leerzeichen am Ende verschluckt)
+#             "..." waere anders: darin ersetzt die Shell Variablen wie $f
+# ^           Regex-ANKER "Zeilenanfang" (kein Zeichen, sondern eine Position); Gegenstueck: $ = Zeilenende
+#             '^## ' trifft "## Titel", aber NICHT "Text mit ## mittendrin"
+# ##          zwei echte Rauten = Markdown-Ueberschrift Ebene 2 (# Kapitel, ## Abschnitt, ### Unterpunkt)
+# Leerzeichen Absicht: nur GENAU Ebene 2 -> "### Unterpunkt" faellt raus (nach ## kommt # statt Leerzeichen)
+# 09-*.Rmd    GLOB: die SHELL (nicht grep) ersetzt das vorher durch den echten Dateinamen
+#             * = beliebig viele beliebige Zeichen -> langen Namen nicht tippen
+# >1 Datei    grep schreibt "dateiname:" vor jeden Treffer
+
+# Ausgabe
+# 09-modul-ix-....Rmd:## Anwendungssysteme in der Forschung
+# 10-modul-x-....Rmd:## Fernbehandlung
+
+# Varianten
+grep -n '^## ' datei.md     # -n = mit Zeilennummer (zum Hinspringen: vim +123 datei.md)
+grep -c '^## ' *.Rmd        # -c = nur ANZAHL Ueberschriften pro Datei
+grep '^#\{1,3\} ' datei.md  # Ebene 1 bis 3 (\{1,3\} = 1- bis 3-mal das Zeichen davor)
+
+# ACHTUNG: * hat zwei Bedeutungen
+#   Glob  (Shell, Dateinamen): *  = beliebig viel
+#   Regex (grep, Inhalt):      *  = Zeichen DAVOR 0-mal oder oefter;  .* = beliebig viel
+```
 
 vim: aktuelle Zeile in die Mac-Zwischenablage kopieren (danach mit `Cmd-V` ueberall einfuegen)
 
