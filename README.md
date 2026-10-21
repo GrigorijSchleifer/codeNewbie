@@ -7,7 +7,7 @@ Mein Lern-Logbuch: Terminal, Git, Vim, tmux, R, SQL, Emacs … — neueste Eintr
 
 | Jahr | Jan | Feb | Mär | Apr | Mai | Jun | Jul | Aug | Sep | Okt | Nov | Dez |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **2026** |  | [2](#februar-2026) |  |  |  |  |  |  |  | [3](#oktober-2026) |  |  |
+| **2026** |  | [2](#februar-2026) |  |  |  |  |  |  |  | [4](#oktober-2026) |  |  |
 | **2025** | [5](#januar-2025) |  |  |  |  |  |  |  |  |  |  |  |
 | **2024** |  | [4](#februar-2024) | [8](#märz-2024) | [2](#april-2024) | [3](#mai-2024) | [3](#juni-2024) | [3](#juli-2024) | [8](#august-2024) | [3](#september-2024) | [3](#oktober-2024) | [1](#november-2024) | [2](#dezember-2024) |
 | **2023** |  | [14](#februar-2023) |  |  |  |  |  |  | [1](#september-2023) | [5](#oktober-2023) |  |  |
@@ -17,6 +17,22 @@ Mein Lern-Logbuch: Terminal, Git, Vim, tmux, R, SQL, Emacs … — neueste Eintr
 ---
 
 ## Oktober 2026
+
+### 21.10.2026
+
+Vim: text yanked with `y` goes straight to the Mac clipboard (`Cmd+V` in any app)
+
+```vim
+" in ~/.vimrc
+set clipboard=unnamed
+" Vim's default register (the "unnamed" one) = Mac clipboard
+" y (yank/copy) -> paste anywhere with Cmd+V; Cmd+C in another app -> paste in Vim with p
+" Careful: d / x (delete) also land there and overwrite the clipboard
+" without this setting: address the Mac register explicitly with "*y and "*p
+```
+
+Requirement: Vim built with `+clipboard` (check: `vim --version | grep clipboard`).
+My full, commented `.vimrc`: [VIM/.vimrc](VIM/.vimrc)
 
 ### 20.10.2026
 
