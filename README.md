@@ -20,6 +20,22 @@ Mein Lern-Logbuch: Terminal, Git, Vim, tmux, R, SQL, Emacs … — neueste Eintr
 
 ### 21.10.2026
 
+Python: print a variable from a script as readable JSON, straight from the terminal
+
+```bash
+python3 -c 'import json, mymodule as m; print(json.dumps(m.CONFIG, indent=2, ensure_ascii=False))'
+# python3 -c '...'      run a short piece of Python without creating a file
+# import mymodule as m  load mymodule.py (from the current folder), short name m
+# m.CONFIG              any variable defined in that file (dict, list, ...)
+# json.dumps(...)       turn it into JSON text
+#   indent=2            line breaks + 2-space indentation -> readable
+#   ensure_ascii=False  keep umlauts (ä, ö, ü) instead of ä
+```
+
+Careful:
+- `import` runs the whole file top to bottom. Safe only if the script's main code sits under `if __name__ == "__main__":`, otherwise it starts running.
+- `import` also rewrites `__pycache__/mymodule.cpython-XY.pyc` → don't rely on that cache file as an "old version" backup.
+
 Vim: text yanked with `y` goes straight to the Mac clipboard (`Cmd+V` in any app)
 
 ```vim
