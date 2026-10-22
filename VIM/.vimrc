@@ -1,4 +1,4 @@
-" ~/.vimrc — my Vim configuration (as of 2026-10-21)
+" ~/.vimrc — my Vim configuration (as of 2026-10-22)
 " Vim reads this file on every start. Comments start with "
 " Comments always sit on their own line here: after a mapping (nmap/inoremap)
 " a " would otherwise be read as part of the mapping.
@@ -35,6 +35,15 @@ set wrap
 
 " When typing a closing bracket, briefly flash the matching opening one
 set showmatch
+
+" Highlight the line the cursor is on (easier to find the cursor after n/N)
+set cursorline
+
+" Highlight all search matches (clear with :noh)
+set hlsearch
+
+" Jump to the first match while still typing /pattern
+set incsearch
 
 " (duplicate, see above) tab width 4 columns
 set tabstop=4

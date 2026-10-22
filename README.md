@@ -7,7 +7,7 @@ Mein Lern-Logbuch: Terminal, Git, Vim, tmux, R, SQL, Emacs … — neueste Eintr
 
 | Jahr | Jan | Feb | Mär | Apr | Mai | Jun | Jul | Aug | Sep | Okt | Nov | Dez |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **2026** |  | [2](#februar-2026) |  |  |  |  |  |  |  | [4](#oktober-2026) |  |  |
+| **2026** |  | [2](#februar-2026) |  |  |  |  |  |  |  | [5](#oktober-2026) |  |  |
 | **2025** | [5](#januar-2025) |  |  |  |  |  |  |  |  |  |  |  |
 | **2024** |  | [4](#februar-2024) | [8](#märz-2024) | [2](#april-2024) | [3](#mai-2024) | [3](#juni-2024) | [3](#juli-2024) | [8](#august-2024) | [3](#september-2024) | [3](#oktober-2024) | [1](#november-2024) | [2](#dezember-2024) |
 | **2023** |  | [14](#februar-2023) |  |  |  |  |  |  | [1](#september-2023) | [5](#oktober-2023) |  |  |
@@ -18,23 +18,38 @@ Mein Lern-Logbuch: Terminal, Git, Vim, tmux, R, SQL, Emacs … — neueste Eintr
 
 ## Oktober 2026
 
+### 22.10.2026
+
+Vim: see where the cursor is when jumping between search matches with `n`/`N`
+
+```vim
+" in ~/.vimrc
+set cursorline   " highlight the whole line the cursor is on
+set hlsearch     " highlight ALL matches of the last search (/pattern); clear with :noh
+set incsearch    " jump to the first match while still typing /pattern
+```
+
+Try it without editing the file: `:set cursorline` (undo: `:set nocursorline`).
+Line too faint in your color scheme? `highlight CursorLine cterm=NONE ctermbg=238` (cterm=NONE removes the underline, 238 = gray from the 256-color palette).
+My full, commented `.vimrc`: [VIM/.vimrc](VIM/.vimrc)
+
 ### 21.10.2026
 
 Python: print a variable from a script as readable JSON, straight from the terminal
 
 ```bash
-python3 -c 'import json, mymodule as m; print(json.dumps(m.CONFIG, indent=2, ensure_ascii=False))'
-# python3 -c '...'      run a short piece of Python without creating a file
-# import mymodule as m  load mymodule.py (from the current folder), short name m
-# m.CONFIG              any variable defined in that file (dict, list, ...)
-# json.dumps(...)       turn it into JSON text
-#   indent=2            line breaks + 2-space indentation -> readable
-#   ensure_ascii=False  keep umlauts (ä, ö, ü) instead of ä
+python3 -c 'import json, test_modell as t; print(json.dumps(t.SCHEMA, indent=2, ensure_ascii=False))'
+# python3 -c '...'         run a short piece of Python without creating a file
+# import test_modell as t  load test_modell.py (from the current folder), short name t
+# t.SCHEMA                 the variable SCHEMA defined in that file (here: a dict)
+# json.dumps(...)          turn it into JSON text
+#   indent=2               line breaks + 2-space indentation -> readable
+#   ensure_ascii=False     keep umlauts (ä, ö, ü) instead of ä
 ```
 
 Careful:
 - `import` runs the whole file top to bottom. Safe only if the script's main code sits under `if __name__ == "__main__":`, otherwise it starts running.
-- `import` also rewrites `__pycache__/mymodule.cpython-XY.pyc` → don't rely on that cache file as an "old version" backup.
+- `import` also rewrites `__pycache__/test_modell.cpython-XY.pyc` → don't rely on that cache file as an "old version" backup.
 
 Vim: text yanked with `y` goes straight to the Mac clipboard (`Cmd+V` in any app)
 
