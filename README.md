@@ -7,7 +7,7 @@ Mein Lern-Logbuch: Terminal, Git, Vim, tmux, R, SQL, Emacs … — neueste Eintr
 
 | Jahr | Jan | Feb | Mär | Apr | Mai | Jun | Jul | Aug | Sep | Okt | Nov | Dez |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **2026** |  | [2](#februar-2026) |  |  |  |  |  |  |  | [5](#oktober-2026) |  |  |
+| **2026** |  | [2](#februar-2026) |  |  |  |  |  |  |  | [6](#oktober-2026) |  |  |
 | **2025** | [5](#januar-2025) |  |  |  |  |  |  |  |  |  |  |  |
 | **2024** |  | [4](#februar-2024) | [8](#märz-2024) | [2](#april-2024) | [3](#mai-2024) | [3](#juni-2024) | [3](#juli-2024) | [8](#august-2024) | [3](#september-2024) | [3](#oktober-2024) | [1](#november-2024) | [2](#dezember-2024) |
 | **2023** |  | [14](#februar-2023) |  |  |  |  |  |  | [1](#september-2023) | [5](#oktober-2023) |  |  |
@@ -17,6 +17,64 @@ Mein Lern-Logbuch: Terminal, Git, Vim, tmux, R, SQL, Emacs … — neueste Eintr
 ---
 
 ## Oktober 2026
+
+### 27.10.2026
+
+Free the terminal while a server is running: `Ctrl+Z` + `bg`
+
+**When it matters:** a server like `python3 -m http.server <PORT>` blocks the terminal and
+floods it with request logs (`"GET /index.html HTTP/1.1" 200 -`), so you can't type anything.
+
+```bash
+# Ctrl+Z   -> "[1] + 22775 suspended ..."   STOPS (pauses) the job -- server no longer answers!
+bg         # resume job in the BACKGROUND -> server runs again, prompt is free
+jobs       # list background jobs of THIS terminal: [1] + running python3 -m http.server ...
+fg         # bring it back to the foreground (then Ctrl+C to quit it)
+kill %1    # stop job number 1 directly (%1 = job number from `jobs`, not the PID)
+```
+
+Careful:
+- `Ctrl+Z` alone = paused, not backgrounded → browser just keeps loading. Always follow with `bg`.
+- After `bg` the log lines still pop up in the terminal. To silence them, start it like this instead:
+  ```bash
+  python3 -m http.server <PORT> --bind 127.0.0.1 > /dev/null 2>&1 &
+  # >  /dev/null   throw away normal output (stdout)
+  # 2>&1           send error output (stderr, where http.server writes its logs) to the same place
+  # &              start directly in the background (no Ctrl+Z needed)
+  ```
+- Jobs belong to the terminal: close the tab → the server usually dies too.
+  Lost track of it? → find it with `lsof` (see next entry) and `kill <PID>`.
+
+Which program is blocking a port? (`OSError: [Errno 48] Address already in use`)
+
+**When it matters:** you start a local server (e.g. `python3 -m http.server <PORT>`) and get
+`Address already in use` → an old server (often from an earlier session / another terminal tab)
+is still running on that port.
+
+```bash
+lsof -nP -iTCP -sTCP:LISTEN          # ALL ports where a server is waiting ("listening")
+lsof -nP -iTCP:<PORT> -sTCP:LISTEN   # only this one port
+# lsof          "list open files" -- on macOS network connections count as files too
+# -n            show IP addresses as numbers (no name lookup -> faster)
+# -P            show ports as numbers (8001), not service names
+# -iTCP         only TCP network connections (-iTCP:<PORT> = only that port)
+# -sTCP:LISTEN  only connections in state LISTEN = servers waiting for requests
+
+# Output (read: COMMAND, PID, NAME):
+# COMMAND  PID    ... NAME
+# Python   16813  ... TCP 127.0.0.1:<PORT> (LISTEN)
+#   127.0.0.1:<PORT>  reachable only from this Mac (good)
+#   *:<PORT>          reachable from the whole network!
+
+lsof -a -p <PID> -d cwd   # which folder was that server started from?
+# -p <PID>   only this process      -d cwd   only its "current working directory"
+# -a         combine the filters with AND (default is OR -> far too much output)
+```
+
+Then either:
+- **reuse it**: if it serves the right folder, just open `http://127.0.0.1:<PORT>` (reload with `Cmd+Shift+R`)
+- **stop it**: `kill <PID>`, check with `lsof -nP -iTCP:<PORT> -sTCP:LISTEN; echo $?` (`1` = nothing found = port free)
+- **avoid it**: just use another port
 
 ### 22.10.2026
 
