@@ -20,6 +20,25 @@ Mein Lern-Logbuch: Terminal, Git, Vim, tmux, R, SQL, Emacs … — neueste Eintr
 
 ### 29.10.2026
 
+tmux: `Ctrl-a` then `p` → jump to the **previous window** (not pane)
+
+**When it matters:** you have several tmux windows (tabs in the status bar at the bottom) and
+want to go back one. Works in any terminal (plain Terminal.app too), not only in iTerm.
+
+```bash
+# Ctrl-a   the prefix: "next key is a tmux command" (my ~/.tmux.conf: set -g prefix C-a;
+#          tmux default would be Ctrl-b)
+# p        previous-window   (n = next-window, 0-9 = window by number)
+# release Ctrl-a first, THEN press p (two steps, not all at once)
+```
+
+- **Window vs. pane:** a window = a whole tab; a pane = a split *inside* one window.
+  Panes: `Ctrl-a` + arrow key, `Ctrl-a o` (next pane), or my `Ctrl-h/j/k/l` (no prefix).
+- **Why it works everywhere:** tmux reads `~/.tmux.conf` itself when it starts, no matter which
+  terminal app it runs in. The terminal only passes the keys through.
+- Only works *inside* tmux (start it with `tmux`). Outside, `Ctrl-a` just moves the cursor to the
+  start of the line.
+
 Git: delete a branch on GitHub (remote) → `git push origin --delete <branch>`
 
 **When it matters:** a pull request is merged, but its branch (e.g. a `claude/…` branch from
