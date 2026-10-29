@@ -7,7 +7,7 @@ Mein Lern-Logbuch: Terminal, Git, Vim, tmux, R, SQL, Emacs … — neueste Eintr
 
 | Jahr | Jan | Feb | Mär | Apr | Mai | Jun | Jul | Aug | Sep | Okt | Nov | Dez |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **2026** |  | [2](#februar-2026) |  |  |  |  |  |  |  | [6](#oktober-2026) |  |  |
+| **2026** |  | [2](#februar-2026) |  |  |  |  |  |  |  | [7](#oktober-2026) |  |  |
 | **2025** | [5](#januar-2025) |  |  |  |  |  |  |  |  |  |  |  |
 | **2024** |  | [4](#februar-2024) | [8](#märz-2024) | [2](#april-2024) | [3](#mai-2024) | [3](#juni-2024) | [3](#juli-2024) | [8](#august-2024) | [3](#september-2024) | [3](#oktober-2024) | [1](#november-2024) | [2](#dezember-2024) |
 | **2023** |  | [14](#februar-2023) |  |  |  |  |  |  | [1](#september-2023) | [5](#oktober-2023) |  |  |
@@ -18,7 +18,88 @@ Mein Lern-Logbuch: Terminal, Git, Vim, tmux, R, SQL, Emacs … — neueste Eintr
 
 ## Oktober 2026
 
+### 29.10.2026
+
+Git: delete a branch on GitHub (remote) → `git push origin --delete <branch>`
+
+**When it matters:** a pull request is merged, but its branch (e.g. a `claude/…` branch from
+Claude in the cloud) still lies around on GitHub. The merged changes are safe in `main`, the
+branch is just clutter.
+
+```bash
+git push origin --delete claude/was-siehst-du-hk3hir
+# git push    send something to the remote repo
+# origin      name of the remote = the GitHub repo (see: git remote -v)
+# --delete    don't upload commits, instead REMOVE the branch there
+# claude/...  name of the branch on GitHub (the "/" is just part of the name)
+```
+
+- Only the branch *on GitHub* is gone. A local copy (if any) stays → `git branch -d <branch>`
+  (`-d` refuses if not merged yet, `-D` forces it).
+- The commits are not lost if they were merged — they live on in `main`.
+- Check first: `git branch -r` (lists remote branches); after deleting, others clean up their
+  stale list with `git fetch --prune`.
+
+Git + Vim: keep Vim's `.swp` files out of commits → `*.swp` in `.gitignore`
+
+**When it matters:** while a file is open in Vim, Vim keeps a swap file next to it
+(`notes.md` → `.notes.md.swp`, crash backup of your unsaved edits). Every edit changes it, so
+`git status` lists it, and `git add .` / `git add -A` would put it into the commit — clutter
+that means nothing to anyone else.
+
+```bash
+echo '*.swp' >> .gitignore   # >> = APPEND a line (a single > would overwrite the whole file!)
+# *.swp   glob: every file ending in .swp, in every folder of the repo
+#         (the leading dot of .notes.md.swp doesn't matter, * matches it too)
+```
+
+- From now on Git ignores new swap files: `git add .` skips them, even when Vim creates them again.
+- **Catch:** `.gitignore` only works for files Git does NOT track yet. A `.swp` that was
+  committed before stays tracked (shows up as `M` = modified) → remove it from Git once:
+
+```bash
+git rm --cached .notes.md.swp   # --cached = remove from Git only, the file on disk stays
+git commit -m "Stop tracking Vim swap file, ignore *.swp"
+```
+
+- Check: `git check-ignore -v .notes.md.swp` → prints which `.gitignore` line matches
+  (no output = not ignored).
+
 ### 27.10.2026
+
+Vim: file was changed by someone else (another program, Claude, git pull) → `:e!`
+
+**When it matters:** you have a file open in Vim, and meanwhile another program changes it on
+disk. Vim still shows the OLD version from its memory (buffer). If you now save with `:w`, you
+overwrite the other changes with your old version. A leftover `.<file>.swp` (swap file) next to
+the file is the hint that Vim still has it open somewhere.
+
+```vim
+:e!     " e = edit (reload the file from disk), ! = throw away my unsaved changes in Vim
+        " -> buffer now shows what is really on disk; nothing is written
+:e      " same without ! -> refuses if you have unsaved changes (safe check first)
+```
+
+Vim often warns itself: `W11: Warning: File "x" has changed since editing started` →
+answer `L` (Load File) does the same as `:e!`.
+
+Vim: why is everything suddenly light/cream-colored? → set `background` explicitly
+
+**When it matters:** many color schemes (e.g. my favorite `retrobox`) have a light AND a dark
+variant. Without `set background=…` Vim *guesses* by asking the terminal for its background
+color — and sometimes guesses "light".
+
+```vim
+" in ~/.vimrc -- ORDER matters: background first, then the color scheme
+set background=dark   " force the dark variant, don't let Vim guess
+colorscheme retrobox  " the scheme reads 'background' while it loads
+```
+
+```vim
+:set background=dark          " try it live, nothing saved (back: :set background=light)
+:verbose set background?      " ? = show current value; verbose = which file/line set it last
+                              " no "Last set from ~/.vimrc" line -> Vim guessed it itself
+```
 
 Free the terminal while a server is running: `Ctrl+Z` + `bg`
 

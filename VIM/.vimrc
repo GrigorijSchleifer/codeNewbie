@@ -62,4 +62,7 @@ let &t_SI = "\e[6 q"
 let &t_EI = "\e[1 q"
 
 " Color scheme retrobox (ships with Vim 9.0 and later)
+" background FIRST: retrobox has a light and a dark variant; without this line
+" Vim guesses from the terminal (sometimes "light" -> cream background)
+set background=dark
 colorscheme retrobox
