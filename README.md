@@ -1,6 +1,6 @@
 # codeNewbie
 
-Mein Lern-Logbuch: Terminal, Git, Vim, tmux, R, SQL, Emacs … — neueste Einträge zuerst.
+A physician learning the languages and tools of software development, to understand engineers' work, collaborate as an equal, and help shape safer clinical software. These are the pearls I collect along the way
 
 <!-- Neuer Eintrag: unter den passenden Monat als "### TT.MM.JJJJ" (neueste oben);
      neuer Monat: "## Monat JJJJ" anlegen und in der Tabelle verlinken. -->
