@@ -7,7 +7,7 @@ A physician learning the languages and tools of software development, to underst
 
 | Jahr | Jan | Feb | Mär | Apr | Mai | Jun | Jul | Aug | Sep | Okt | Nov | Dez |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **2026** |  | [2](#februar-2026) |  |  |  |  |  |  |  | [7](#oktober-2026) |  |  |
+| **2026** |  | [2](#februar-2026) |  |  |  |  |  |  |  | [8](#oktober-2026) |  |  |
 | **2025** | [5](#januar-2025) |  |  |  |  |  |  |  |  |  |  |  |
 | **2024** |  | [4](#februar-2024) | [8](#märz-2024) | [2](#april-2024) | [3](#mai-2024) | [3](#juni-2024) | [3](#juli-2024) | [8](#august-2024) | [3](#september-2024) | [3](#oktober-2024) | [1](#november-2024) | [2](#dezember-2024) |
 | **2023** |  | [14](#februar-2023) |  |  |  |  |  |  | [1](#september-2023) | [5](#oktober-2023) |  |  |
@@ -17,6 +17,41 @@ A physician learning the languages and tools of software development, to underst
 ---
 
 ## Oktober 2026
+
+### 31.10.2026
+
+Python REPL next to Vim in tmux: IPython + autoreload + vim-slime
+
+```bash
+# Homebrew Python blocks pip (PEP 668) -> project venv
+cd ~/Desktop/eScribe
+python3 -m venv .venv
+source .venv/bin/activate
+pip install ipython
+```
+
+```python
+# ~/.ipython/profile_default/startup/00-autoreload.py
+get_ipython().run_line_magic("load_ext", "autoreload")
+get_ipython().run_line_magic("autoreload", "2")   # 2 = reload changed modules before every command
+```
+
+```python
+import test_modell as t   # in IPython: t.SCHEMA etc.; edits saved in Vim are picked up automatically
+```
+
+```vim
+" ~/.vimrc  (plugin: git clone https://github.com/jpalardy/vim-slime ~/.vim/pack/plugins/start/vim-slime)
+let g:slime_target = "tmux"
+let g:slime_python_ipython = 1
+let g:slime_default_config = {"socket_name": "default", "target_pane": "{bottom-right}"}
+let g:slime_dont_ask_default = 1
+" Normal mode: Ctrl-c Ctrl-c = send paragraph (or V-selection) to the IPython pane
+```
+
+- Restart Vim after installing the plugin (`pack/*/start` loads only at startup).
+- Main code in the script under `if __name__ == "__main__":`, otherwise `import` runs it.
+- Wrong pane? `Ctrl-a q` shows pane numbers → use `":.2"` instead of `"{bottom-right}"`.
 
 ### 29.10.2026
 
