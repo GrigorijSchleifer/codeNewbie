@@ -7,12 +7,40 @@ A physician learning the languages and tools of software development, to underst
 
 | Jahr | Jan | Feb | Mär | Apr | Mai | Jun | Jul | Aug | Sep | Okt | Nov | Dez |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **2026** |  | [2](#februar-2026) |  |  |  |  |  |  |  | [8](#oktober-2026) |  |  |
+| **2026** |  | [2](#februar-2026) |  |  |  |  |  |  |  | [8](#oktober-2026) | [1](#november-2026) |  |
 | **2025** | [5](#januar-2025) |  |  |  |  |  |  |  |  |  |  |  |
 | **2024** |  | [4](#februar-2024) | [8](#märz-2024) | [2](#april-2024) | [3](#mai-2024) | [3](#juni-2024) | [3](#juli-2024) | [8](#august-2024) | [3](#september-2024) | [3](#oktober-2024) | [1](#november-2024) | [2](#dezember-2024) |
 | **2023** |  | [14](#februar-2023) |  |  |  |  |  |  | [1](#september-2023) | [5](#oktober-2023) |  |  |
 
 <sub>Zahl = Anzahl Einträge im Monat, Klick springt hin.</sub>
+
+---
+
+## November 2026
+
+### 01.11.2026
+
+Python REPL: show a dict readably → `pprint` (to look at it) or `json.dumps` (to save/send it)
+
+**When it matters:** typing just `SCHEMA` (or `json.dumps(SCHEMA)`) in the REPL/IPython gives one
+endless line with quotes and literal `\n`. The REPL shows the *repr* (the "code version" of the
+value), not the nicely printed text.
+
+```python
+from pprint import pprint   # pprint = "pretty print", built into Python, nothing to install
+pprint(SCHEMA)              # nested dicts/lists, indented over several lines
+                            # still Python: 'single quotes', True, None
+
+import json
+print(json.dumps(SCHEMA, indent=2, ensure_ascii=False))
+# print(...)               print the text itself, not its repr -> real line breaks
+# json.dumps(...)          turn the dict into JSON text: "double quotes", true, null
+#   indent=2               line breaks + 2-space indentation
+#   ensure_ascii=False     keep umlauts (ä, ö, ü)
+```
+
+- **Rule of thumb:** `pprint` for looking, `json.dumps` for saving to a file or handing to Ollama.
+- Same idea from the terminal without a REPL: see 21.10.2026.
 
 ---
 
