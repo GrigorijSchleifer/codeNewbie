@@ -78,7 +78,7 @@ print(json.dumps(SCHEMA, indent=2, ensure_ascii=False))
 Python REPL next to Vim in tmux unsing vim-slime
 
 ```bash
-# Create a virtual environment (COOL)
+# Create a virtual environment and install ipython
 cd ~/Desktop/eScribe
 python3 -m venv .venv
 source .venv/bin/activate
