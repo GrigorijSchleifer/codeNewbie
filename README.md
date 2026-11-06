@@ -7,7 +7,7 @@ A physician learning the languages and tools of software development, to underst
 
 | Jahr | Jan | Feb | Mär | Apr | Mai | Jun | Jul | Aug | Sep | Okt | Nov | Dez |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **2026** |  | [2](#februar-2026) |  |  |  |  |  |  |  | [8](#oktober-2026) | [1](#november-2026) |  |
+| **2026** |  | [2](#februar-2026) |  |  |  |  |  |  |  | [8](#oktober-2026) | [2](#november-2026) |  |
 | **2025** | [5](#januar-2025) |  |  |  |  |  |  |  |  |  |  |  |
 | **2024** |  | [4](#februar-2024) | [8](#märz-2024) | [2](#april-2024) | [3](#mai-2024) | [3](#juni-2024) | [3](#juli-2024) | [8](#august-2024) | [3](#september-2024) | [3](#oktober-2024) | [1](#november-2024) | [2](#dezember-2024) |
 | **2023** |  | [14](#februar-2023) |  |  |  |  |  |  | [1](#september-2023) | [5](#oktober-2023) |  |  |
@@ -17,6 +17,33 @@ A physician learning the languages and tools of software development, to underst
 ---
 
 ## November 2026
+
+### 06.11.2026
+
+tmux: `Cmd+C` copies nothing after selecting with the mouse → tmux grabbed the selection
+
+**When it matters:** with `set -g mouse on`, dragging selects text in **tmux's own buffer**
+(yellow highlight), not in the Mac clipboard. `Cmd+C` finds nothing. (`Ctrl+C` never copies on
+the Mac, it interrupts the running program.)
+
+Quick fix: hold a key while dragging → the terminal selects instead of tmux, `Cmd+C` works again.
+- Terminal.app: `Fn` (some versions: `Option ⌥`) · iTerm2: `Option ⌥`
+
+Permanent fix: let tmux send its selection straight to the Mac clipboard.
+
+```bash
+# ~/.tmux.conf
+bind -T copy-mode    MouseDragEnd1Pane send -X copy-pipe-and-cancel "pbcopy"
+bind -T copy-mode-vi MouseDragEnd1Pane send -X copy-pipe-and-cancel "pbcopy"
+# MouseDragEnd1Pane      = the moment you RELEASE the left mouse button after dragging
+# copy-pipe-and-cancel   = pipe the selection into a command, then leave copy mode
+# "pbcopy"               = macOS: input -> clipboard
+# two lines              = tmux has two copy modes (emacs and vi key tables)
+
+tmux source-file ~/.tmux.conf   # load it into the running session
+```
+
+- Then: select with the mouse, release → already in the clipboard, paste with `Cmd+V` anywhere.
 
 ### 01.11.2026
 
