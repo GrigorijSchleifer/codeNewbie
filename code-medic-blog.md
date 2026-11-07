@@ -2,6 +2,36 @@
 
 <!-- Format neuer Einträge: "## 💊 JJJJ-MM-TT — Thema", neuester oben, Abschluss mit "---" -->
 
+## 💊 2026-11-07 — Neovim with your existing `~/.vimrc`
+
+Problem: after installing Neovim, all keybindings and the theme are gone.
+Reason: Neovim does **not** read `~/.vimrc` — it looks for `~/.config/nvim/init.vim` (or `init.lua`).
+
+Fix — don't copy the `.vimrc`, just point Neovim to it (as recommended in `:help nvim-from-vim`):
+
+```sh
+cat > ~/.config/nvim/init.vim <<'EOF'
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath = &runtimepath
+source ~/.vimrc
+EOF
+```
+
+| Line | Effect |
+|---|---|
+| `set runtimepath^=~/.vim runtimepath+=~/.vim/after` | Neovim also finds plugins/colorschemes in the old `~/.vim` folder |
+| `let &packpath = &runtimepath` | same for plugin packages (`pack/` folders) |
+| `source ~/.vimrc` | reads your `.vimrc` on every start |
+
+- From now on **keep editing only `~/.vimrc`** — it applies to Vim and Neovim alike.
+  `init.vim` is just a signpost and never needs to change.
+- Changes take effect on the next start, or immediately with `:source ~/.vimrc`.
+- Vim-only lines (e.g. `let &t_SI = ...` for cursor shape) are silently ignored by Neovim.
+  For Neovim-only settings use `if has('nvim') ... endif`.
+- Check: `:colorscheme` (without a name) shows the active scheme.
+
+---
+
 ## 💊 2026-10-20 — Zurückspringen mit `cd -`
 
 | Eingabe | Wirkung |
