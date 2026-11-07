@@ -7,7 +7,7 @@ A physician learning the languages and tools of software development, to underst
 
 | Jahr | Jan | Feb | Mär | Apr | Mai | Jun | Jul | Aug | Sep | Okt | Nov | Dez |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **2026** |  | [2](#februar-2026) |  |  |  |  |  |  |  | [8](#oktober-2026) | [2](#november-2026) |  |
+| **2026** |  | [2](#februar-2026) |  |  |  |  |  |  |  | [8](#oktober-2026) | [3](#november-2026) |  |
 | **2025** | [5](#januar-2025) |  |  |  |  |  |  |  |  |  |  |  |
 | **2024** |  | [4](#februar-2024) | [8](#märz-2024) | [2](#april-2024) | [3](#mai-2024) | [3](#juni-2024) | [3](#juli-2024) | [8](#august-2024) | [3](#september-2024) | [3](#oktober-2024) | [1](#november-2024) | [2](#dezember-2024) |
 | **2023** |  | [14](#februar-2023) |  |  |  |  |  |  | [1](#september-2023) | [5](#oktober-2023) |  |  |
@@ -17,6 +17,24 @@ A physician learning the languages and tools of software development, to underst
 ---
 
 ## November 2026
+
+### 07.11.2026
+
+IPython: which variables exist right now? → `%whos` (delete single ones with `del`)
+
+```python
+%who            # just the names:  a  b  t
+%whos           # table: name, type, content
+%who list       # only variables of one type (here: lists)
+
+del a           # delete ONE variable (only the name; the object lives on if b still points to it)
+del a, b        # several at once
+%reset_selective -f ^tmp   # all names matching a regex (^tmp = starting with "tmp"), -f = no prompt
+%reset -f       # delete EVERYTHING, fresh start without leaving IPython
+```
+
+- `%`-commands exist only in IPython (`In [1]:`), not in plain `python3` (`>>>`).
+  There: `[n for n in dir() if not n.startswith("_")]` lists your own names.
 
 ### 06.11.2026
 
