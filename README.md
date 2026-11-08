@@ -7,7 +7,7 @@ A physician learning the languages and tools of software development, to underst
 
 | Jahr | Jan | Feb | Mär | Apr | Mai | Jun | Jul | Aug | Sep | Okt | Nov | Dez |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **2026** |  | [2](#februar-2026) |  |  |  |  |  |  |  | [8](#oktober-2026) | [3](#november-2026) |  |
+| **2026** |  | [2](#februar-2026) |  |  |  |  |  |  |  | [8](#oktober-2026) | [4](#november-2026) |  |
 | **2025** | [5](#januar-2025) |  |  |  |  |  |  |  |  |  |  |  |
 | **2024** |  | [4](#februar-2024) | [8](#märz-2024) | [2](#april-2024) | [3](#mai-2024) | [3](#juni-2024) | [3](#juli-2024) | [8](#august-2024) | [3](#september-2024) | [3](#oktober-2024) | [1](#november-2024) | [2](#dezember-2024) |
 | **2023** |  | [14](#februar-2023) |  |  |  |  |  |  | [1](#september-2023) | [5](#oktober-2023) |  |  |
@@ -17,6 +17,29 @@ A physician learning the languages and tools of software development, to underst
 ---
 
 ## November 2026
+
+### 08.11.2026
+
+pdb/ipdb: show only the script's own names → filter `globals()` (no Python internals)
+
+**When it matters:** `p globals()` in the debugger dumps a huge dict incl. `__builtins__`,
+`__name__`, `__file__` … The script's own imports, constants and functions get lost in it.
+
+```python
+ipdb> p [n for n in globals() if not n.startswith("__")]
+['json', 're', 'sys', 'time', 'urllib', 'datetime', 'Path', 'OLLAMA_URL', ..., 'bewerte', 'main']
+# p              print the value of an expression (pdb command)
+# globals()      dict of all names at module level of the script (keys = names)
+# for n in ...   looping over a dict gives its keys -> the names
+# if not n.startswith("__")   drop the "dunder" names Python adds itself (__name__, __builtins__, ...)
+# [ ... ]        list comprehension -> result is a plain list of names
+
+ipdb> p locals()   # inside a function (e.g. paused in main()): its LOCAL variables + values
+```
+
+- `globals()` = names of the whole file (imports, constants, functions); `locals()` = only the
+  names of the function you are currently paused in. At module level both are the same.
+- IPython equivalent without a debugger: `%who` (see 07.11.2026).
 
 ### 07.11.2026
 
