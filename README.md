@@ -7,7 +7,7 @@ A physician learning the languages and tools of software development, to underst
 
 | Jahr | Jan | Feb | Mär | Apr | Mai | Jun | Jul | Aug | Sep | Okt | Nov | Dez |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **2026** |  | [2](#februar-2026) |  |  |  |  |  |  |  | [8](#oktober-2026) | [4](#november-2026) |  |
+| **2026** |  | [2](#februar-2026) |  |  |  |  |  |  |  | [8](#oktober-2026) | [5](#november-2026) |  |
 | **2025** | [5](#januar-2025) |  |  |  |  |  |  |  |  |  |  |  |
 | **2024** |  | [4](#februar-2024) | [8](#märz-2024) | [2](#april-2024) | [3](#mai-2024) | [3](#juni-2024) | [3](#juli-2024) | [8](#august-2024) | [3](#september-2024) | [3](#oktober-2024) | [1](#november-2024) | [2](#dezember-2024) |
 | **2023** |  | [14](#februar-2023) |  |  |  |  |  |  | [1](#september-2023) | [5](#oktober-2023) |  |  |
@@ -17,6 +17,24 @@ A physician learning the languages and tools of software development, to underst
 ---
 
 ## November 2026
+
+### 09.11.2026
+
+jq: show JSON / JSON Lines readably in the terminal, or only selected fields (no Python needed)
+
+```bash
+jq . results.jsonl                                   # whole object, indented + colored
+jq -c '.elemente[] | {element, ist}' results.jsonl   # one short line per list entry
+# jq                  command-line JSON processor (macOS: /usr/bin/jq)
+# .                   "the whole object, unchanged"
+# .elemente[]         take every entry of the list "elemente" one by one
+# |                   pass the result on (like a shell pipe)
+# {element, ist}      keep only these two fields
+# -c                  compact: each result on ONE line
+```
+
+- `.jsonl` (one JSON object per line) works directly. The file name needs its full extension.
+- Python alternative without `import`: `python3 -m json.tool --json-lines results.jsonl`
 
 ### 08.11.2026
 
