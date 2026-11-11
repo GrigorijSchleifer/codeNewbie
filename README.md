@@ -7,7 +7,7 @@ A physician learning the languages and tools of software development, to underst
 
 | Jahr | Jan | Feb | Mär | Apr | Mai | Jun | Jul | Aug | Sep | Okt | Nov | Dez |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **2026** |  | [2](#februar-2026) |  |  |  |  |  |  |  | [8](#oktober-2026) | [5](#november-2026) |  |
+| **2026** |  | [2](#februar-2026) |  |  |  |  |  |  |  | [8](#oktober-2026) | [6](#november-2026) |  |
 | **2025** | [5](#januar-2025) |  |  |  |  |  |  |  |  |  |  |  |
 | **2024** |  | [4](#februar-2024) | [8](#märz-2024) | [2](#april-2024) | [3](#mai-2024) | [3](#juni-2024) | [3](#juli-2024) | [8](#august-2024) | [3](#september-2024) | [3](#oktober-2024) | [1](#november-2024) | [2](#dezember-2024) |
 | **2023** |  | [14](#februar-2023) |  |  |  |  |  |  | [1](#september-2023) | [5](#oktober-2023) |  |  |
@@ -17,6 +17,24 @@ A physician learning the languages and tools of software development, to underst
 ---
 
 ## November 2026
+
+### 11.11.2026
+
+Linux server: who is logged in right now? → `w`
+
+```bash
+w
+# USER      TTY    FROM              LOGIN@   IDLE   WHAT
+# grigorij  pts/0  93.133.15.132     13:40    0.00s  w
+# root      pts/1  93.133.15.132     13:45    12:03  -bash
+# USER   which account       FROM   from which IP (yours? -> fine)
+# LOGIN@ since when          IDLE   how long nobody typed there
+# WHAT   what is running in that session right now
+```
+
+- Forgotten session (e.g. root, long IDLE)? Close it: `pkill -t pts/1` (TTY from the list).
+- On the Mac: `ps aux | grep "ssh "` lists your own open SSH connections.
+- Entries in `~/.ssh/config` are just an address book, no connection exists until you run `ssh …`.
 
 ### 09.11.2026
 
